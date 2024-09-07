@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { ROUTE_NAME } from '../../constants/route-name';
 
