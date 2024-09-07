@@ -1,27 +1,16 @@
-import { useState } from 'react';
-
 function HomePage() {
-    const [count, setCount] = useState(0);
-
     return (
         <>
-            <div>
-                <h1 className="text-3xl font-bold underline text-center">
-                    Hello world!
-                </h1>
-            </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
+            <div className="flex flex-col gap-3 items-center w-2/3 m-auto">
+                <b>About</b>
+                <p className="text-center">
+                    Chatter Box is a unique voice and AI tool that allows
+                    projects to conduct an AMA session without the need for a
+                    human host. Entirely powered by AI, Chatter box will respond
+                    using an entirely customizable voice to any voice or text
+                    based questions
                 </p>
             </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
         </>
     );
 }

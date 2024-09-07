@@ -3,20 +3,40 @@ import { ROUTE_NAME } from '../../constants/route-name';
 
 function MainLayout() {
     return (
-        <main>
-            <header className="space-x-4 p-4">
-                <button>
-                    <Link to={ROUTE_NAME.HOME}>Home</Link>
-                </button>
-
-                <button>
-                    <Link to={ROUTE_NAME.AUTHENTICATE.SIGN_IN}>Sign in</Link>
-                </button>
-            </header>
+        <main className='bg-black text-white min-h-screen'>
+            <nav className="w-100 px-8 md:px-auto ">
+                <div className="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-center flex-wrap md:flex-nowrap">
+                    <div className="text-gray-500 order-3 w-full md:w-auto md:order-2">
+                        <ul className="flex font-semibold justify-between">
+                            <Link
+                                to={ROUTE_NAME.HOME}
+                                className="md:px-4 md:py-2 text-indigo-500"
+                            >
+                                About
+                            </Link>
+                            <li className="md:px-4 md:py-2 hover:text-indigo-400">
+                                <a href="#">Features</a>
+                            </li>
+                            <li className="md:px-4 md:py-2 hover:text-indigo-400">
+                                <a href="#">Benefits</a>
+                            </li>
+                            <li className="md:px-4 md:py-2 hover:text-indigo-400">
+                                <a href="#">Roadmap</a>
+                            </li>
+                            <li className="md:px-4 md:py-2 hover:text-indigo-400">
+                                <a href="#">Tokenomics</a>
+                            </li>{' '}
+                            <li className="md:px-4 md:py-2 hover:text-indigo-400">
+                                <a href="#">Social</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
             <Outlet />
 
-            <footer>footer</footer>
+            <footer></footer>
         </main>
     );
 }
