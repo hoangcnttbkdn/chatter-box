@@ -10,5 +10,23 @@ export default {
         './src/**/*.{ts,tsx}',
     ],
     prefix: '',
-    plugins: [tailwincssAnimate],
+    plugins: [tailwincssAnimate, require('@tailwindcss/forms')],
+    theme: {
+        extend: {
+            colors: {
+                red: '#F15634',
+            },
+        },
+    },
+    // Enable backdrop utilities
+    backdropFilter: {
+        none: 'none',
+        blur: 'blur(4px)',
+    },
+    filter: {
+        'blur-sm': 'blur(4px)',
+        'blur-md': 'blur(8px)',
+        'blur-lg': 'blur(12px)',
+        'blur-xl': 'blur(16px)',
+    },
 };
