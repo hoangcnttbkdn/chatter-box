@@ -16,9 +16,7 @@ const Section = ({
 }: SectionProps) => {
     return (
         <section
-            className={
-                ' min-h-screen px-10 flex flex-col gap-2 ' + customClassName
-            }
+            className={' min-h-screen flex flex-col gap-2 ' + customClassName}
             {...rest}
         >
             <Title title={title} className="relative" />

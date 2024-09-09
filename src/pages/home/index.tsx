@@ -11,6 +11,15 @@ import * as redContent from '../../assets/images/content.png';
 import * as threeGroup from '../../assets/images/three-group.png';
 import * as twoGroup from '../../assets/images/twogroup.png';
 import * as benefitBg from '../../assets/images/benefit-bg.png';
+import * as textIcon from '../../assets/images/page/icon text.png';
+import * as voiceIcon from '../../assets/images/page/icon voice.png';
+import * as commentFrame1 from '../../assets/images/page/comment 1.png';
+import * as commentFrame2 from '../../assets/images/page/comment 2.png';
+import * as logo from '../../assets/images/page/logo.png';
+import * as circleBg from '../../assets/images/page/circle background.png';
+import * as chart from '../../assets/images/page/chart.png';
+
+import './home.scss';
 
 function HomePage() {
     interface Feature {
@@ -136,6 +145,43 @@ future of the platform, ensuring that the product evolves
 according to community needs.
 `,
             customClass: 'bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
+        },
+    ];
+
+    const purposes: {
+        title: string;
+        content: string;
+    }[] = [
+        {
+            title: `Access to Premium AMA Sessions`,
+            content: `Users can use tokens to unlock 
+exclusive, high-profile AMA sessions`,
+        },
+        {
+            title: `Staking for Rewards:`,
+            content: `Token holders can stake 
+tokens in the ecosystem, earning rewards 
+based on their participation and contributions`,
+        },
+        {
+            title: `Governance Rights:`,
+            content: `Token holders 
+can vote on key platform 
+developments, feature rollouts, and 
+governance policies`,
+        },
+        {
+            title: `Payment for Services`,
+            content: `AMA hosts can 
+use tokens to pay for custom Chatter 
+Box personalities or advanced 
+functionalities`,
+        },
+        {
+            title: `Revenue share:`,
+            content: `Token holders will be able to 
+participate in revenue share with the revenue 
+generated from the use of Chatter Box`,
         },
     ];
     return (
@@ -358,6 +404,153 @@ according to community needs.
                             </>
                         );
                     })}
+                </div>
+            </Section>
+
+            <Section title="How it Works" customClassName="max-w-6xl mx-auto">
+                <div className="flex flex-col gap-8">
+                    <p className="text-xl text-center">
+                        Chatter Box is designed to understand both text and
+                        voice inputs, so it can be interacted with in the way
+                        that's most convenient for the community.
+                    </p>
+                    <div className="flex gap-8">
+                        <div className="flex items-center gap-8 feature-background px-4">
+                            <img
+                                src={textIcon.default}
+                                className="h-2/3 object-contain"
+                            />
+                            <div className="flex flex-col gap-2">
+                                <b className="text-2xl text-red">For Text</b>
+                                <p className="w-2/3">
+                                    Simply type the question into the chat
+                                    window.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-8 feature-background px-4">
+                            <img
+                                src={voiceIcon.default}
+                                className="h-2/3 object-contain"
+                            />
+                            <div className="flex flex-col gap-2">
+                                <b className="text-2xl text-red">For Voice</b>
+                                <p className="w-2/3">
+                                    Use the microphone to ask the question
+                                    aloud.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p className="text-center">
+                        Powered by advanced natural language processing (NLP),
+                        the chatbot then instantly analyzes the question,
+                        recognizing context, intent, and keywords. Whether the
+                        question is in regards to factual information, need
+                        step-by-step guidance, or seeking recommendations,
+                        Chatter Box is designed to understand the query as if
+                        you’re conversing with a real person.
+                    </p>
+                    <p className="text-center">
+                        Once your question is processed, Chatter Box will
+                        leverage it’s vast knowledge base and AI-driven
+                        algorithms to generate a precise, informative response.
+                        If it’s a factual question, the bot will retrieve
+                        relevant information quickly. For more personalized or
+                        conversational queries, it dynamically formulates
+                        responses to provide the most useful and engaging
+                        answers.
+                    </p>
+                    <p className="text-center">
+                        Chatter Box is also designed to get smarter with every
+                        interaction and scale at the same time as the host’s
+                        project. It will learn from past conversations to
+                        improve its ability to understand and respond to future
+                        questions, and will seemingly incorporate new
+                        information and updates about the host’s project.
+                    </p>
+                </div>
+            </Section>
+
+            <Section
+                title="Tokenomics and Utility - $CHAT"
+                customClassName="relative"
+            >
+                <div className="max-w-6xl mx-auto  grid grid-cols-3 items-center gap-8">
+                    <div className="relative">
+                        <img
+                            src={commentFrame1.default}
+                            className="object-contain"
+                        />
+                        <div className="absolute w-full top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                            <div className="text-red text-xl">
+                                Token Distrubution
+                            </div>
+                            <span className="text-base">85% LP</span>
+                            <span className="text-base">10% Staking</span>
+                            <span className="text-base">
+                                5% Marketing/Partnership
+                            </span>
+                        </div>
+                    </div>
+                    <img src={logo.default} className="object-contain" />
+                    <div className="relative">
+                        <img
+                            src={commentFrame2.default}
+                            className="object-contain"
+                        />
+                        <div className="absolute w-full top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2">
+                            <div className="text-red text-xl">
+                                Tax Structure
+                            </div>
+                            <span className="text-4xl">5/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="relative">
+                    <img src={circleBg.default} className="" />
+
+                    <div className="absolute  w-full top-1/4">
+                        <div className="grid grid-cols-3 items-center justify-center w-full">
+                            <p className="text-center text-xl">
+                                <b>85%</b> LP
+                            </p>
+                            <img src={chart.default} />
+                            <div className="flex flex-col items-center gap-8 text-xl">
+                                <p>
+                                    <b>5%</b> Marketing/Partnership
+                                </p>
+                                <p>
+                                    <b>10%</b> Staking
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="max-w-6xl mx-auto grid grid-cols-3 gap-10 bg-black">
+                        <div className="text-red text-2xl">
+                            The native token ($CHAT) on our platform will serve
+                            several purposes:
+                        </div>
+                        {purposes?.map((purpose) => {
+                            return (
+                                <>
+                                    <div className="bg-dark-gray rounded-md p-6">
+                                        <b>{purpose.title}: </b>
+                                        <span>{purpose.content}</span>
+                                    </div>
+                                </>
+                            );
+                        })}
+                    </div>
+                    <div className="my-4 flex items-center justify-center w-full">
+                        <span className="text-center">
+                            The tokenized economy will foster community
+                            involvement, ensuring that the platform is both
+                            user- driven and self-sustaining.
+                        </span>
+                    </div>
                 </div>
             </Section>
         </>
