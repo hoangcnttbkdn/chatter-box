@@ -3,10 +3,14 @@ import Title from '../../components/ui/title';
 
 import * as bg1 from '../../assets/images/section1-bg.png';
 import * as markIcon from '../../assets/images/mark-icon.png';
+import * as markIconSm from '../../assets/images/mark-icon-sm.png';
 import * as radial from '../../assets/images/radial-red.png';
 import * as radialSm from '../../assets/images/radial-red-sm.png';
 import * as message from '../../assets/images/message.svg';
 import * as redContent from '../../assets/images/content.png';
+import * as threeGroup from '../../assets/images/three-group.png';
+import * as twoGroup from '../../assets/images/twogroup.png';
+import * as benefitBg from '../../assets/images/benefit-bg.png';
 
 function HomePage() {
     interface Feature {
@@ -53,9 +57,90 @@ function HomePage() {
                 'The personality of the bot can be tailored to reflect the preferences of the AMA host or brand, giving each session a unique flavor.',
         },
     ];
+
+    const problems: {
+        title: string;
+        description: string;
+        subTitle: string;
+        items: string[];
+        note?: string;
+    }[] = [
+        {
+            title: 'The Problem',
+            description: '',
+            subTitle:
+                'Traditional AMA sessions on Telegram have several challenges',
+            items: [
+                'Limited Engagement: Text-based interactions can be monotonous and less engaging for users',
+                'Time-Consuming Moderation: Managing and moderating live sessions manually requires considerable effort and resources',
+                'Scalability Issues: Conducting multiple AMAs simultaneously is nearly impossible without significant human involvemen',
+                'Accessibility Barriers: Language limitations and the complexity of text can alienate non-native speakers and those with limited technical proficiency',
+            ],
+            note: 'These problems highlight the need for a more scalable, accessible, and engaging solution for AMA sessions.',
+        },
+        {
+            title: 'The Solution',
+            description: `hatter Box offers a solution by transforming text-based AMA interviews into interactive, voice-driven
+sessions. The bot is designed to conduct interviews in real-time, using natural language processing
+(NLP) to generate voice responses that closely resemble human conversation. This increases user
+engagement, provides faster response times, allows the AMA host to reach a broader, global audience
+through multi-language support, and even run simultaneous AMA sessions at the same time.`,
+            subTitle: 'Key features of Chatter Box include:',
+            items: [
+                'Voice-Based Interaction: Users can ask questions and receive real-time voice responses from the bot.',
+                'AI-Driven Moderation: The bot handles the flow of conversation and manages the session efficiently without manual inpu',
+                `Customizable Personality: The bot’s tone and interaction style can be adapted to fit the brand or AMA host's personality`,
+                `Multi-Language Support: The bot supports multiple languages, making AMAs more accessible to a global audience.`,
+            ],
+        },
+    ];
+
+    const benefits: {
+        title: string;
+        content: string;
+        customClass: string;
+    }[] = [
+        {
+            title: 'Enhanced User Engagement:',
+            content: `Voice interactions lead to more natural,
+human-like exchanges, improving user retention
+and participation in AMA sessions.`,
+            customClass: 'top-1/4 right-0',
+        },
+        {
+            title: 'Scalability:',
+            content: `Chatter Box can handle multiple AMA sessions
+simultaneously, making it easy for influencers,
+brands, and crypto projects to engage with their
+audience at scale.`,
+            customClass: 'top-1/4 left-0',
+        },
+        {
+            title: 'Cost-Efficiency:',
+            content: `By automating moderation and interaction,
+hosts can reduce the costs associated with
+managing AMA sessions.`,
+            customClass: 'top-2/3 left-0',
+        },
+        {
+            title: 'Increased Accessibility:',
+            content: `The bot’s multi-language capabilities and
+voice-based interactions make it easier for nonnative speakers and less tech-savvy users to
+participate.`,
+            customClass: 'top-2/3 right-0',
+        },
+        {
+            title: 'Community-Driven Development:',
+            content: `With governance tokens, users have a voice in shaping the
+future of the platform, ensuring that the product evolves
+according to community needs.
+`,
+            customClass: 'bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
+        },
+    ];
     return (
         <>
-            <Section title="">
+            <Section id="about-us" title="">
                 <div className="flex flex-col gap-2 w-full h-screen">
                     <img
                         src={bg1.default}
@@ -76,7 +161,11 @@ function HomePage() {
                 </div>
             </Section>
 
-            <Section title="Key Features" customClassName="relative">
+            <Section
+                id="feature"
+                title="Key Features"
+                customClassName="relative"
+            >
                 <img
                     src={radial.default}
                     alt=""
@@ -114,6 +203,7 @@ function HomePage() {
             </Section>
 
             <Section
+                id="benefit"
                 title=""
                 customClassName="relative flex justify-center items-center"
             >
@@ -150,10 +240,126 @@ function HomePage() {
                 </div>
             </Section>
 
-            <Section title="The Problem">
-                <></>
+            <Section
+                id="roadmap"
+                title=""
+                className="relative max-w-6xl mx-auto"
+            >
+                <>
+                    <img
+                        src={threeGroup.default}
+                        alt=""
+                        className="absolute top-2/3 left-0 w-1/5"
+                    />
+                    <img
+                        src={twoGroup.default}
+                        alt=""
+                        className=" absolute top-0 right-0 w-1/5"
+                    />
+                    {problems?.map((section, sectionIndex) => {
+                        return (
+                            <>
+                                {
+                                    <div
+                                        className={
+                                            'relative flex flex-col gap-2 ' +
+                                            (sectionIndex % 2
+                                                ? 'items-end'
+                                                : '')
+                                        }
+                                    >
+                                        <div className="text-3xl font-bold">
+                                            {section.title}
+                                        </div>
+                                        <p
+                                            className={
+                                                'w-2/3 ' +
+                                                (sectionIndex % 2
+                                                    ? 'text-right'
+                                                    : '')
+                                            }
+                                        >
+                                            {section.description}
+                                        </p>
+
+                                        <div className="text-red text-xl">
+                                            {section.subTitle}
+                                        </div>
+
+                                        <div className="flex flex-col gap-2">
+                                            {section.items?.map((item) => {
+                                                return (
+                                                    <>
+                                                        <div
+                                                            className={
+                                                                'flex gap-2 ' +
+                                                                (sectionIndex %
+                                                                2
+                                                                    ? 'flex-row-reverse'
+                                                                    : '')
+                                                            }
+                                                        >
+                                                            <img
+                                                                src={
+                                                                    markIconSm.default
+                                                                }
+                                                                alt=""
+                                                                className="w-4"
+                                                            />
+                                                            <p className="font-light text-base">
+                                                                {item}
+                                                            </p>
+                                                        </div>
+                                                    </>
+                                                );
+                                            })}
+                                        </div>
+                                        <i className="font-light text-base">
+                                            {section.note}
+                                        </i>
+                                    </div>
+                                }
+                            </>
+                        );
+                    })}
+                </>
             </Section>
-            <Section title="Introduction"></Section>
+
+            <Section
+                title=""
+                customClassName="relative w-full h-full flex items-center justify-center max-w-6xl mx-auto"
+            >
+                <img
+                    src={benefitBg.default}
+                    alt=""
+                    className="absolute h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                />
+                <div className="">
+                    <b className="text-5xl text-center relative">
+                        Benefits of <br /> Our Solution
+                    </b>
+
+                    {benefits?.map((benefit) => {
+                        return (
+                            <>
+                                <div
+                                    className={
+                                        'absolute flex flex-col gap-2 items-center justify-center w-1/3 ' +
+                                        benefit.customClass
+                                    }
+                                >
+                                    <span className="text-red text-base">
+                                        {benefit.title}
+                                    </span>
+                                    <p className="text-base text-center">
+                                        {benefit.content}
+                                    </p>
+                                </div>
+                            </>
+                        );
+                    })}
+                </div>
+            </Section>
         </>
     );
 }

@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 @import url(./assets/scss/font.scss);
+
+* {
+    scroll-behavior: smooth;
+}
