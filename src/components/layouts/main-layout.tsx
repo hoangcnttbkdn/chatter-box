@@ -25,7 +25,7 @@ function MainLayout() {
                                 <a href="#roadmap">Roadmap</a>
                             </li>
                             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-                                <a href="#tokenmic">Tokenomics</a>
+                                <a href="#tokenomic">Tokenomics</a>
                             </li>
                             <li className="md:px-4 md:py-2 hover:text-indigo-400">
                                 <a href="#social">Social</a>

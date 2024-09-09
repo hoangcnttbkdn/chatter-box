@@ -249,7 +249,6 @@ generated from the use of Chatter Box`,
             </Section>
 
             <Section
-                id="benefit"
                 title=""
                 customClassName="relative flex justify-center items-center"
             >
@@ -286,11 +285,7 @@ generated from the use of Chatter Box`,
                 </div>
             </Section>
 
-            <Section
-                id="roadmap"
-                title=""
-                className="relative max-w-6xl mx-auto"
-            >
+            <Section title="" className="relative max-w-6xl mx-auto">
                 <>
                     <img
                         src={threeGroup.default}
@@ -372,6 +367,7 @@ generated from the use of Chatter Box`,
             </Section>
 
             <Section
+                id="benefit"
                 title=""
                 customClassName="relative w-full h-full flex items-center justify-center max-w-6xl mx-auto"
             >
@@ -474,6 +470,7 @@ generated from the use of Chatter Box`,
             </Section>
 
             <Section
+                id="tokenomic"
                 title="Tokenomics and Utility - $CHAT"
                 customClassName="relative"
             >
@@ -514,11 +511,11 @@ generated from the use of Chatter Box`,
 
                     <div className="absolute  w-full top-1/4">
                         <div className="grid grid-cols-3 items-center justify-center w-full">
-                            <p className="text-center text-xl">
+                            <p className="text-center text-3xl">
                                 <b>85%</b> LP
                             </p>
                             <img src={chart.default} />
-                            <div className="flex flex-col items-center gap-8 text-xl">
+                            <div className="flex flex-col items-center gap-8 text-3xl">
                                 <p>
                                     <b>5%</b> Marketing/Partnership
                                 </p>
