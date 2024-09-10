@@ -23,7 +23,7 @@ function OfficalLink() {
         },
     ];
     return (
-        <div className="flex flex-col gap-10 items-center">
+        <div className="flex flex-col gap-10 items-center mb-20">
             <div className="flex gap-6">
                 {Array.from({ length: 10 }).map((_, index) => (
                     <div

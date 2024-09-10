@@ -265,11 +265,10 @@ generated from the use of Chatter Box`,
                 title="Key Features"
                 customClassName="relative px-8"
             >
-                <img
-                    src={radial.default}
-                    alt=""
-                    className="absolute top-0 w-1/3 -translate-y-1/4 left-0"
-                />
+                <div className="absolute top-0 w-1/3 -translate-y-1/4 left-0">
+                    <img src={radial.default} alt="" className="" />
+                </div>
+
                 <img
                     src={radialSm.default}
                     alt=""
@@ -422,7 +421,7 @@ generated from the use of Chatter Box`,
             <Section
                 id="benefit"
                 title=""
-                customClassName="relative w-full h-full flex items-center justify-center max-w-6xl mx-auto"
+                customClassName="min-h-screen relative w-full h-full flex items-center justify-center max-w-6xl mx-auto"
             >
                 <div className="absolute h-full w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
                     <img
@@ -533,7 +532,7 @@ generated from the use of Chatter Box`,
                 title="Tokenomics and Utility - $CHAT"
                 customClassName="relative"
             >
-                <div className="max-w-6xl mx-auto  grid grid-cols-2 md:grid-cols-3 items-center gap-8">
+                <div className="relative z-10 max-w-6xl mx-auto  grid grid-cols-2 md:grid-cols-3 items-center gap-8">
                     <div className="relative">
                         <img
                             src={commentFrame1.default}
@@ -572,10 +571,15 @@ generated from the use of Chatter Box`,
                     </div>
                 </div>
 
-                <div className="relative">
-                    <img src={circleBg.default} className="" />
+                <div className="relative flex flex-col gap-4 md:gap-10">
+                    <div className="absolute top-0 -translate-y-1/4">
+                        <img
+                            src={circleBg.default}
+                            className="shake-animation "
+                        />
+                    </div>
 
-                    <div className="absolute w-full top-[16%] md:top-1/4">
+                    <div className="relative z-10">
                         <div className="grid grid-cols-3 items-center justify-center w-full">
                             <p className="text-center text-xl md:text-3xl flex items-center gap-4 justify-end">
                                 <b>85%</b> LP
@@ -584,7 +588,7 @@ generated from the use of Chatter Box`,
 
                             <img
                                 src={chart.default}
-                                className="w-4/5 m-auto z-20"
+                                className="w-4/5 m-auto z-20 animate-rotate-3d"
                             />
                             <div className="flex flex-col items-start gap-8 text-base relative left-4 md:left-10">
                                 <p className="flex items-center gap-2">
@@ -600,7 +604,7 @@ generated from the use of Chatter Box`,
                             </div>
                         </div>
                     </div>
-                    <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-10 bg-black px-10">
+                    <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-10 bg-black px-10">
                         <div className="text-red text-xl md:text-2xl">
                             The native token ($CHAT) on our platform will serve
                             several purposes:
@@ -616,7 +620,7 @@ generated from the use of Chatter Box`,
                             );
                         })}
                     </div>
-                    <div className="my-4 flex items-center justify-center w-full px-8">
+                    <div className="relative z-10 my-4 flex items-center justify-center w-full px-8">
                         <span className="text-center">
                             The tokenized economy will foster community
                             involvement, ensuring that the platform is both
