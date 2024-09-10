@@ -15,10 +15,7 @@ const Section = ({
     ...rest
 }: SectionProps) => {
     return (
-        <section
-            className={' min-h-screen flex flex-col gap-2 ' + customClassName}
-            {...rest}
-        >
+        <section className={'flex flex-col gap-2 ' + customClassName} {...rest}>
             <Title title={title} className="relative" />
             <div className={'mt-4 ' + customContentClass}>{children}</div>
         </section>

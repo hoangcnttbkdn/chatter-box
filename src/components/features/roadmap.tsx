@@ -1,6 +1,7 @@
 import * as markIconSm from '../../assets/images/mark-icon-sm.png';
 import * as roadmapBg from '../../assets/images/roadmap-bg.png';
 import * as roadmapBgFlip from '../../assets/images/roadmap-bg-flip.png';
+import * as visualCenter from '../../assets/images/visual center.png';
 
 function Roadmap() {
     const milestones: {
@@ -57,7 +58,14 @@ function Roadmap() {
         },
     ];
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-black my-10 px-4 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-black my-10 px-4 md:px-8 relative overflow-hidden max-w-6xl mx-auto">
+            <img
+                src={visualCenter.default}
+                alt=""
+                className={
+                    'absolute top-0 left-1/2 -translate-x-1/2 w-1/3'
+                }
+            />
             {milestones?.map((milestone, mileStoneIndex) => {
                 return (
                     <div

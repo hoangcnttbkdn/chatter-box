@@ -24,6 +24,7 @@ import * as emptyMessage from '../../assets/images/empty-message.png';
 import './home.scss';
 import ThreeDots from '../../components/ui/three-dots/three-dots';
 import Roadmap from '../../components/features/roadmap';
+import OfficalLink from '../../components/features/offical-link';
 
 function HomePage() {
     interface Feature {
@@ -627,6 +628,9 @@ generated from the use of Chatter Box`,
 
             <Section id="roadmap" title="Roadmap" customClassName="relative">
                 <Roadmap></Roadmap>
+            </Section>
+            <Section id="social" title="" customClassName="relative">
+                <OfficalLink></OfficalLink>
             </Section>
         </>
     );
