@@ -23,6 +23,7 @@ import * as emptyMessage from '../../assets/images/empty-message.png';
 
 import './home.scss';
 import ThreeDots from '../../components/ui/three-dots/three-dots';
+import Roadmap from '../../components/features/roadmap';
 
 function HomePage() {
     interface Feature {
@@ -622,6 +623,10 @@ generated from the use of Chatter Box`,
                         </span>
                     </div>
                 </div>
+            </Section>
+
+            <Section id="roadmap" title="Roadmap" customClassName="relative">
+                <Roadmap></Roadmap>
             </Section>
         </>
     );
