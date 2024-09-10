@@ -147,7 +147,8 @@ participate.`,
 future of the platform, ensuring that the product evolves
 according to community needs.
 `,
-            customClass: 'bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2',
+            customClass:
+                'bottom-0 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2',
         },
     ];
 
@@ -192,7 +193,7 @@ generated from the use of Chatter Box`,
             <Section id="about-us" title="">
                 <div className="flex flex-col gap-2 w-full h-screen">
                     <div className="absolute h-1/2 top-1/6 left-1/2 -translate-x-1/2 z-10">
-                        <img src={logo.default} alt="" className='' />
+                        <img src={logo.default} alt="" className="" />
                         <div className="absolute top-0 right-0 w-3/5">
                             <img src={emptyMessage.default} alt="" />
                             <div className="w-full z-20 absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -260,19 +261,19 @@ generated from the use of Chatter Box`,
             <Section
                 id="feature"
                 title="Key Features"
-                customClassName="relative"
+                customClassName="relative px-8"
             >
                 <img
                     src={radial.default}
                     alt=""
-                    className=" absolute top-0 w-1/3 -translate-y-1/4 left-0"
+                    className="absolute top-0 w-1/3 -translate-y-1/4 left-0"
                 />
                 <img
                     src={radialSm.default}
                     alt=""
                     className=" absolute bottom-0 right-0 w-1/5"
                 />
-                <div className="relative bg-black border-black  lg:max-w-6xl rounded-xl border p-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="relative bg-black border-black  lg:max-w-6xl rounded-xl border p-4 md:p-8 mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-6">
                     <img
                         src={message.default}
                         alt=""
@@ -307,7 +308,7 @@ generated from the use of Chatter Box`,
                     alt="Background"
                     className="absolute blur-md w-1/3  object-contain top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 />
-                <div className="max-w-6xl relative h-full flex flex-col gap-4 justify-center items-center text-center text-base">
+                <div className="max-w-6xl px-8 relative h-full flex flex-col gap-4 justify-center items-center text-center text-base">
                     <Title title="Introduction"></Title>
                     <p>
                         The rise of blockchain technology and cryptocurrencies
@@ -335,7 +336,7 @@ generated from the use of Chatter Box`,
                 </div>
             </Section>
 
-            <Section title="" className="relative max-w-6xl mx-auto">
+            <Section title="" className="relative max-w-6xl mx-auto px-8">
                 <>
                     <img
                         src={threeGroup.default}
@@ -345,7 +346,7 @@ generated from the use of Chatter Box`,
                     <img
                         src={twoGroup.default}
                         alt=""
-                        className=" absolute top-0 right-0 w-1/5"
+                        className="absolute top-0 right-0 w-1/5"
                     />
                     {problems?.map((section, sectionIndex) => {
                         return (
@@ -364,7 +365,7 @@ generated from the use of Chatter Box`,
                                         </div>
                                         <p
                                             className={
-                                                'w-2/3 ' +
+                                                'md:w-2/3 ' +
                                                 (sectionIndex % 2
                                                     ? 'text-right'
                                                     : '')
@@ -395,7 +396,7 @@ generated from the use of Chatter Box`,
                                                                     markIconSm.default
                                                                 }
                                                                 alt=""
-                                                                className="w-4"
+                                                                className="w-4 object-contain"
                                                             />
                                                             <p className="font-light text-base">
                                                                 {item}
@@ -426,9 +427,10 @@ generated from the use of Chatter Box`,
                     alt=""
                     className="absolute h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 />
-                <div className="">
-                    <b className="text-5xl text-center relative">
-                        Benefits of <br /> Our Solution
+                <div className="flex flex-col">
+                    <b className="text-4xl md:text-5xl text-center relative mb-4 md:mb-0">
+                        Benefits of <br className="hidden md:block" /> Our
+                        Solution
                     </b>
 
                     {benefits?.map((benefit) => {
@@ -436,7 +438,7 @@ generated from the use of Chatter Box`,
                             <>
                                 <div
                                     className={
-                                        'absolute flex flex-col gap-2 items-center justify-center w-1/3 ' +
+                                        'z-10 md:absolute flex flex-col gap-2 items-center justify-center md:w-1/3 ' +
                                         benefit.customClass
                                     }
                                 >
@@ -453,14 +455,17 @@ generated from the use of Chatter Box`,
                 </div>
             </Section>
 
-            <Section title="How it Works" customClassName="max-w-6xl mx-auto">
+            <Section
+                title="How it Works"
+                customClassName="max-w-6xl mx-auto px-8"
+            >
                 <div className="flex flex-col gap-8">
-                    <p className="text-xl text-center">
+                    <p className="md:text-xl text-center">
                         Chatter Box is designed to understand both text and
                         voice inputs, so it can be interacted with in the way
                         that's most convenient for the community.
                     </p>
-                    <div className="flex gap-8">
+                    <div className="flex items-center flex-col md:flex-row gap-8">
                         <div className="flex items-center gap-8 feature-background px-4">
                             <img
                                 src={textIcon.default}
@@ -524,34 +529,41 @@ generated from the use of Chatter Box`,
                 title="Tokenomics and Utility - $CHAT"
                 customClassName="relative"
             >
-                <div className="max-w-6xl mx-auto  grid grid-cols-3 items-center gap-8">
+                <div className="max-w-6xl mx-auto  grid grid-cols-2 md:grid-cols-3 items-center gap-8">
                     <div className="relative">
                         <img
                             src={commentFrame1.default}
                             className="object-contain"
                         />
                         <div className="absolute w-full top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                            <div className="text-red text-xl">
+                            <div className="text-red md:text-xl">
                                 Token Distrubution
                             </div>
-                            <span className="text-base">85% LP</span>
-                            <span className="text-base">10% Staking</span>
-                            <span className="text-base">
+                            <div className="flex md:flex-col gap-4">
+                                <span className="md:text-base">85% LP</span>
+                                <span className="md:text-base">
+                                    10% Staking
+                                </span>
+                            </div>
+                            <span className="md:text-base">
                                 5% Marketing/Partnership
                             </span>
                         </div>
                     </div>
-                    <img src={logo.default} className="object-contain" />
+                    <img
+                        src={logo.default}
+                        className="object-contain hidden md:block"
+                    />
                     <div className="relative">
                         <img
                             src={commentFrame2.default}
                             className="object-contain"
                         />
                         <div className="absolute w-full top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2">
-                            <div className="text-red text-xl">
+                            <div className="text-red md:text-xl">
                                 Tax Structure
                             </div>
-                            <span className="text-4xl">5/5</span>
+                            <span className="text-2xl md:text-4xl">5/5</span>
                         </div>
                     </div>
                 </div>
@@ -559,24 +571,33 @@ generated from the use of Chatter Box`,
                 <div className="relative">
                     <img src={circleBg.default} className="" />
 
-                    <div className="absolute  w-full top-1/4">
+                    <div className="absolute w-full top-[16%] md:top-1/4">
                         <div className="grid grid-cols-3 items-center justify-center w-full">
-                            <p className="text-center text-3xl">
+                            <p className="text-center text-xl md:text-3xl flex items-center gap-4 justify-end">
                                 <b>85%</b> LP
+                                <div className="line"></div>
                             </p>
-                            <img src={chart.default} />
-                            <div className="flex flex-col items-center gap-8 text-3xl">
-                                <p>
-                                    <b>5%</b> Marketing/Partnership
+
+                            <img
+                                src={chart.default}
+                                className="w-4/5 m-auto z-20"
+                            />
+                            <div className="flex flex-col items-start gap-8 text-base relative left-4 md:left-10">
+                                <p className="flex items-center gap-2">
+                                    <div className="line line--break-top"></div>
+                                    <b>5%</b> Marketing
+                                    <br className="block md:hidden"></br>
+                                    Partnership
                                 </p>
-                                <p>
+                                <p className="flex items-center gap-2">
+                                    <div className="line line--break-top"></div>{' '}
                                     <b>10%</b> Staking
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className="max-w-6xl mx-auto grid grid-cols-3 gap-10 bg-black">
-                        <div className="text-red text-2xl">
+                    <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-10 bg-black px-10">
+                        <div className="text-red text-xl md:text-2xl">
                             The native token ($CHAT) on our platform will serve
                             several purposes:
                         </div>
@@ -591,7 +612,7 @@ generated from the use of Chatter Box`,
                             );
                         })}
                     </div>
-                    <div className="my-4 flex items-center justify-center w-full">
+                    <div className="my-4 flex items-center justify-center w-full px-8">
                         <span className="text-center">
                             The tokenized economy will foster community
                             involvement, ensuring that the platform is both

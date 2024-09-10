@@ -37,3 +37,38 @@
         2s
     ); // Cube 2 starts with a delay, moving down when Cube 1 is at
 }
+
+.line {
+    width: 40px;
+    height: 1px;
+    border: 1px dashed white;
+    position: relative;
+
+    &--break-top {
+        top: -12px;
+        left: -22px;
+        position: relative;
+        transform: rotate(45deg);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 13px;
+            left: -39px;
+            width: 40px;
+            height: 1px;
+            border: 1px dashed white;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            right: -20px;
+            width: 20px;
+            height: 1px;
+            border: 1px dashed white;
+            transform: rotate(-45deg);
+        }
+    }
+}
