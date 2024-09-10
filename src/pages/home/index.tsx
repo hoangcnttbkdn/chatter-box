@@ -341,12 +341,12 @@ generated from the use of Chatter Box`,
                     <img
                         src={threeGroup.default}
                         alt=""
-                        className="absolute top-2/3 left-0 w-1/5"
+                        className="absolute top-2/3 left-0 w-1/5 "
                     />
                     <img
                         src={twoGroup.default}
                         alt=""
-                        className="absolute top-0 right-0 w-1/5"
+                        className="absolute top-0 right-0 w-1/5 "
                     />
                     {problems?.map((section, sectionIndex) => {
                         return (
@@ -422,11 +422,13 @@ generated from the use of Chatter Box`,
                 title=""
                 customClassName="relative w-full h-full flex items-center justify-center max-w-6xl mx-auto"
             >
-                <img
-                    src={benefitBg.default}
-                    alt=""
-                    className="absolute h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                />
+                <div className="absolute h-full w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                    <img
+                        src={benefitBg.default}
+                        className="h-full w-full object-contain rotate-animation"
+                    />
+                </div>
+
                 <div className="flex flex-col">
                     <b className="text-4xl md:text-5xl text-center relative mb-4 md:mb-0">
                         Benefits of <br className="hidden md:block" /> Our
