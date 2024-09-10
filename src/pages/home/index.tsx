@@ -1,7 +1,6 @@
 import Section from '../../components/ui/section';
 import Title from '../../components/ui/title';
 
-import * as bg1 from '../../assets/images/section1-bg.png';
 import * as markIcon from '../../assets/images/mark-icon.png';
 import * as markIconSm from '../../assets/images/mark-icon-sm.png';
 import * as radial from '../../assets/images/radial-red.png';
@@ -18,8 +17,12 @@ import * as commentFrame2 from '../../assets/images/page/comment 2.png';
 import * as logo from '../../assets/images/page/logo.png';
 import * as circleBg from '../../assets/images/page/circle background.png';
 import * as chart from '../../assets/images/page/chart.png';
+import * as cube from '../../assets/images/page/cube.png';
+import * as box from '../../assets/images/box.png';
+import * as emptyMessage from '../../assets/images/empty-message.png';
 
 import './home.scss';
+import ThreeDots from '../../components/ui/three-dots/three-dots';
 
 function HomePage() {
     interface Feature {
@@ -188,14 +191,58 @@ generated from the use of Chatter Box`,
         <>
             <Section id="about-us" title="">
                 <div className="flex flex-col gap-2 w-full h-screen">
-                    <img
-                        src={bg1.default}
-                        alt=""
-                        className="absolute w-full h-full top-0 left-0 z-0"
-                    />
-                    <div className="absolute bottom-0 mx-10 mb-[15vh] left-1/2 -translate-x-1/2">
-                        <Title title="About"></Title>
-                        <p className="text-center vastago-thin">
+                    <div className="absolute h-1/2 top-1/6 left-1/2 -translate-x-1/2 z-10">
+                        <img src={logo.default} alt="" className='' />
+                        <div className="absolute top-0 right-0 w-3/5">
+                            <img src={emptyMessage.default} alt="" />
+                            <div className="w-full z-20 absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <ThreeDots></ThreeDots>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid items-center justify-center grid-cols-4 mx-auto">
+                        <div></div>
+                        <div className="relative">
+                            <div className="absolute w-2/5 top-0 left-0 -translate-x-1/2 z-10">
+                                <img
+                                    src={cube.default}
+                                    alt=""
+                                    className="animation-move-up"
+                                />
+                            </div>
+
+                            <img
+                                src={box.default}
+                                alt=""
+                                className="-translate-x-1/2"
+                            />
+                        </div>
+
+                        <div className="relative">
+                            <div className="absolute w-2/5 top-0 right-0 translate-x-1/2 z-10">
+                                <img
+                                    src={cube.default}
+                                    alt=""
+                                    className="animation-move-down"
+                                />
+                            </div>
+
+                            <img
+                                src={box.default}
+                                alt=""
+                                className="translate-x-1/2"
+                            />
+                        </div>
+                        <div></div>
+                        <img src={box.default} alt="" className="opacity-75" />
+                        <img src={box.default} alt="" className="opacity-75" />
+                        <img src={box.default} alt="" className="opacity-75" />
+                        <img src={box.default} alt="" className="opacity-75" />
+                    </div>
+
+                    <div className="absolute w-full bottom-[10vh] px-8 z-20 flex flex-col gap-4 items-center justify-center">
+                        <p className="text-center vastago-thin max-w-2xl">
                             Chatter Box is a unique voice and AI tool that
                             allows projects to conduct an AMA session without
                             the need for a human host. Entirely powered by AI,
@@ -203,6 +250,9 @@ generated from the use of Chatter Box`,
                             customizable voice to any voice or text based
                             questions
                         </p>
+                        <div className="cursor-pointer box py-6 rounded-3xl text-3xl px-12 vastago-extra-light">
+                            Launch App
+                        </div>
                     </div>
                 </div>
             </Section>

@@ -4,3 +4,36 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+@mixin move-up-down($direction, $delay) {
+    @keyframes moveUpDown {
+        0% {
+            transform: translateY(0); // Start at original position
+        }
+        25% {
+            transform: translateY(#{$direction * 55}px); // Move up/down
+        }
+        50% {
+            transform: translateY(#{$direction * 55}px); // Stay up/down
+        }
+        75% {
+            transform: translateY(0); // Move back to original position
+        }
+        100% {
+            transform: translateY(0); // Stay at original position
+        }
+    }
+
+    animation: moveUpDown 4s ease-in-out infinite;
+    animation-delay: $delay;
+}
+
+.animation-move-up {
+    @include move-up-down(-1, 0s); // Cube 1 starts moving up
+}
+
+.animation-move-down {
+    @include move-up-down(
+        1,
+        2s
+    ); // Cube 2 starts with a delay, moving down when Cube 1 is at
+}
