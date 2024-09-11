@@ -14,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-.box {
+.launch-app-btn {
     display: grid;
     place-content: center;
     color: white;
@@ -23,18 +23,18 @@ body {
     --border-angle: 0turn; // For animation.
     --main-bg: conic-gradient(
         from var(--border-angle),
-        rgb(51, 17, 17),
-        rgb(26, 5, 8) 5%,
-        rgb(21, 7, 8) 60%,
-        rgb(51, 17, 17) 95%
+        rgb(249, 2, 2),
+        rgb(188, 2, 30) 5%,
+        rgb(252, 8, 24) 60%,
+        rgb(141, 5, 5) 95%
     );
 
     border: solid 5px transparent;
     --gradient-border: conic-gradient(
         from var(--border-angle),
         transparent 25%,
-        rgb(255, 0, 0),
-        rgb(35, 2, 8) 99%,
+        rgb(129, 8, 8),
+        rgb(138, 3, 27) 99%,
         transparent
     );
 
@@ -48,7 +48,7 @@ body {
 
     background-position: center center;
 
-    animation: bg-spin 3s linear infinite;
+    animation: bg-spin 4s linear infinite;
     @keyframes bg-spin {
         to {
             --border-angle: 1turn;
@@ -68,7 +68,7 @@ body {
 
 .rotate-animation {
     display: inline-block;
-    animation: rotate 3s linear infinite;
+    animation: rotate 4s linear infinite;
 }
 
 @keyframes rotate {
@@ -104,7 +104,7 @@ body {
 }
 
 .animate-rotate-3d {
-    animation: transform 10s infinite cubic-bezier(0.5, 2, 0.5, 1);
+    animation: transform 15s infinite cubic-bezier(0.5, 2, 0.5, 1);
 }
 
 @keyframes transform {
