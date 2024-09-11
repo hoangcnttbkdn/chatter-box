@@ -3,8 +3,8 @@ import * as box from '../../assets/images/box.png';
 
 function AboutUs() {
     return (
-        <div className="flex flex-col gap-2 w-full h-screen">
-            <div className="absolute h-1/2 left-1/2 -translate-x-1/2 -translate-y-[10%] z-10">
+        <div className="flex flex-col gap-2 w-full  md:h-screen">
+            <div className="absolute md:h-1/2  left-1/2 -translate-x-1/2 -translate-y-[10%] z-10">
                 <img src="page1/visual logo.png" className="w-2/3 mx-auto" />
             </div>
 
@@ -64,7 +64,7 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="absolute w-full bottom-[10vh] px-8 z-20 flex flex-col gap-4 items-center justify-center">
+            <div className="md:absolute w-full bottom-[10vh] px-8 z-20 flex flex-col gap-4 items-center justify-center">
                 <p className="text-center vastago-thin max-w-2xl">
                     Chatter Box is a unique voice and AI tool that allows
                     projects to conduct an AMA session without the need for a

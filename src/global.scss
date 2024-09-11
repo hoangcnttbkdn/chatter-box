@@ -7,7 +7,7 @@
 
 * {
     scroll-behavior: smooth;
-    @apply vastago-thin;
+    font-family: 'Plus Jakarta Regular', sans-serif;
 }
 
 body {
@@ -68,7 +68,7 @@ body {
 
 .rotate-animation {
     display: inline-block;
-    animation: rotate 4s linear infinite;
+    animation: rotate 8s linear infinite;
 }
 
 @keyframes rotate {
@@ -141,6 +141,58 @@ body {
     }
 }
 
+@keyframes moveTopBottom {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px); // Move left
+    }
+    100% {
+        transform: translateY(0); // Move back to the original position
+    }
+}
+
 .moving-left-right {
     animation: moveLeftRight 3.5s ease-in-out infinite;
+}
+
+.moving-top-bottom {
+    animation: moveTopBottom 3.5s ease-in-out infinite;
+}
+
+.backwards {
+    display: inline;
+    -moz-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -ms-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}
+/* Left to Right Animation */
+.left-to-right {
+    animation: scrollLeftToRight 400s linear infinite;
+}
+
+@keyframes scrollLeftToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Right to Left Animation */
+.right-to-left {
+    animation: scrollRightToLeft 400s linear infinite;
+}
+
+@keyframes scrollRightToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }

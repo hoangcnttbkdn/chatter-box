@@ -1,2 +1,9 @@
 @import url('jakarta-font.scss');
 @import url('vastago-font.scss');
+
+@font-face {
+    font-family: 'Plus Jakarta Regular';
+    src: url('/src/assets/fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
