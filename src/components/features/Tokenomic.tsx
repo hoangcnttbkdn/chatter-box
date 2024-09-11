@@ -12,34 +12,30 @@ function Tokenomic() {
     }[] = [
         {
             title: `Access to Premium AMA Sessions`,
-            content: `Users can use tokens to unlock 
-exclusive, high-profile AMA sessions`,
+            content: `Tokens unlock exclusive, high-profile 
+AMA sessions`,
         },
         {
-            title: `Staking for Rewards:`,
+            title: `Staking Rewards:`,
             content: `Token holders can stake 
-tokens in the ecosystem, earning rewards 
-based on their participation and contributions`,
+tokens to earn rewards for participation`,
         },
         {
             title: `Governance Rights:`,
-            content: `Token holders 
-can vote on key platform 
-developments, feature rollouts, and 
-governance policies`,
+            content: ` Token holders 
+can stake tokens to earn rewards for 
+participation`,
         },
         {
             title: `Payment for Services`,
-            content: `AMA hosts can 
-use tokens to pay for custom Chatter 
-Box personalities or advanced 
-functionalities`,
+            content: `AMA hosts 
+can use tokens for custom Chatter 
+Box features`,
         },
         {
             title: `Revenue share:`,
-            content: `Token holders will be able to 
-participate in revenue share with the revenue 
-generated from the use of Chatter Box`,
+            content: `Token holders can share in 
+Chatter Box's revenue`,
         },
     ];
     return (
@@ -51,16 +47,26 @@ generated from the use of Chatter Box`,
                         className="object-contain"
                     />
                     <div className="absolute w-full top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                        <div className="text-red md:text-xl">
+                        <div className="text-red md:text-base font-bold">
                             Token Distrubution
                         </div>
-                        <div className="flex gap-4">
-                            <span className="md:text-base">85% LP</span>
-                            <span className="md:text-base">10% Staking</span>
+                        <div className="flex flex-col items-center">
+                            <span className="text-sm">
+                                Supply: <b>100M</b>
+                            </span>
+                            <span className="text-sm">
+                                Name: <b>Chatter Box</b>
+                            </span>
+                            <span className="text-sm">
+                                Ticket: <b>CHAT</b>
+                            </span>
+                            <span className="text-sm">
+                                LP: <b>Locked</b>
+                            </span>
+                            <span className="text-sm">
+                                Contract: <b>Renounced</b>
+                            </span>
                         </div>
-                        <span className="md:text-base">
-                            5% Marketing/Partnership
-                        </span>
                     </div>
                 </div>
                 <img
@@ -98,7 +104,7 @@ generated from the use of Chatter Box`,
                         <div className="flex flex-col items-start gap-8 text-base relative left-4 md:left-10">
                             <p className="flex items-center gap-2">
                                 <div className="line line--break-top"></div>
-                                <b>5%</b> Marketing
+                                <b>5%</b> Marketing /
                                 <br className="block md:hidden"></br>
                                 Partnership
                             </p>
@@ -110,7 +116,7 @@ generated from the use of Chatter Box`,
                     </div>
                 </div>
                 <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-10 bg-black px-10">
-                    <div className="text-red text-xl md:text-2xl">
+                    <div className="text-orange text-xl md:text-xl flex items-end justify-start">
                         The native token ($CHAT) on our platform will serve
                         several purposes:
                     </div>
@@ -118,19 +124,14 @@ generated from the use of Chatter Box`,
                         return (
                             <>
                                 <div className="bg-dark-gray rounded-md p-6">
-                                    <b>{purpose.title}: </b>
-                                    <span>{purpose.content}</span>
+                                    <b className="text-sm">{purpose.title}: </b>
+                                    <span className="text-sm">
+                                        {purpose.content}
+                                    </span>
                                 </div>
                             </>
                         );
                     })}
-                </div>
-                <div className="relative z-10 my-4 flex items-center justify-center w-full px-8">
-                    <span className="text-center">
-                        The tokenized economy will foster community involvement,
-                        ensuring that the platform is both user- driven and
-                        self-sustaining.
-                    </span>
                 </div>
             </div>
         </>

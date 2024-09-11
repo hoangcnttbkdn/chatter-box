@@ -3,7 +3,7 @@ import * as box from '../../assets/images/box.png';
 
 function AboutUs() {
     return (
-        <div className="flex flex-col gap-2 w-full  md:h-screen">
+        <div className="flex flex-col gap-2 w-full ">
             <div className="absolute md:h-1/2  left-1/2 -translate-x-1/2 -translate-y-[10%] z-10">
                 <img src="page1/visual logo.png" className="w-2/3 mx-auto" />
             </div>
@@ -39,7 +39,7 @@ function AboutUs() {
                 </div>
                 <div></div>
                 <div className="relative">
-                    <div className="absolute w-2/5 top-0 right-1/2  z-10">
+                    <div className="absolute w-3/5 top-0 right-1/2  z-10">
                         <img
                             src="page1/red-cube.png"
                             alt=""
@@ -52,7 +52,7 @@ function AboutUs() {
                 <img src={box.default} alt="" className="opacity-75" />
                 <img src={box.default} alt="" className="opacity-75" />
                 <div className="relative">
-                    <div className="absolute w-2/5 top-0 left-1/2 z-10">
+                    <div className="absolute w-3/5 top-0 left-1/2 z-10">
                         <img
                             src="page1/red-cube.png"
                             alt=""
@@ -64,13 +64,12 @@ function AboutUs() {
                 </div>
             </div>
 
-            <div className="md:absolute w-full bottom-[10vh] px-8 z-20 flex flex-col gap-4 items-center justify-center">
-                <p className="text-center vastago-thin max-w-2xl">
-                    Chatter Box is a unique voice and AI tool that allows
-                    projects to conduct an AMA session without the need for a
-                    human host. Entirely powered by AI, Chatter box will respond
-                    using an entirely customizable voice to any voice or text
-                    based questions
+            <div className="xl:absolute w-full bottom-[10vh] px-8 z-20 flex flex-col gap-4 items-center justify-center">
+                <div className="text-xl md:text-4xl vastago-bold">
+                    Engage Like Never Before
+                </div>
+                <p className="text-center vastago-thin max-w-2xl jakarta-regular text-base md:text-xl">
+                    Chatter Box: Where AI meets voice for next-gen developer AMAs
                 </p>
                 <div className="cursor-pointer launch-app-btn py-2 rounded-xl text-2xl px-8 vastago-extra-light">
                     Launch App

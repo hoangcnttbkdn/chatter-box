@@ -62,9 +62,7 @@ function Roadmap() {
             <img
                 src={visualCenter.default}
                 alt=""
-                className={
-                    'absolute top-0 left-1/2 -translate-x-1/2 w-1/3'
-                }
+                className={'absolute top-0 left-1/2 -translate-x-1/2 w-1/3'}
             />
             {milestones?.map((milestone, mileStoneIndex) => {
                 return (
@@ -114,7 +112,7 @@ function Roadmap() {
                                             alt=""
                                             className="w-4 object-contain"
                                         />
-                                        <p className="font-light text-sm">
+                                        <p className="font-light text-xs leading-5">
                                             {todo}
                                         </p>
                                     </div>

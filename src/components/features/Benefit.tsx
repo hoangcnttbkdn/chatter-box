@@ -7,39 +7,35 @@ function Benefit() {
         customClass: string;
     }[] = [
         {
-            title: 'Enhanced User Engagement:',
-            content: `Voice interactions lead to more natural,
-human-like exchanges, improving user retention
-and participation in AMA sessions.`,
-            customClass: 'top-1/4 right-0',
+            title: 'Scalability:',
+            content: `Voice interactions enhance natural 
+exchanges, boosting user retention and 
+participation in AMAS at scale`,
+            customClass: 'top-1/4  right-0',
         },
         {
-            title: 'Scalability:',
-            content: `Chatter Box can handle multiple AMA sessions
-simultaneously, making it easy for influencers,
-brands, and crypto projects to engage with their
-audience at scale.`,
+            title: 'Enhanced User Engagement:',
+            content: `Voice interactions enhance natural 
+exchanges, boosting user retention and 
+participation in AMAS`,
             customClass: 'top-1/4 left-0',
         },
         {
             title: 'Cost-Efficiency:',
-            content: `By automating moderation and interaction,
-hosts can reduce the costs associated with
-managing AMA sessions.`,
+            content: `Automated moderation reduces AMA 
+management costs for hosts`,
             customClass: 'top-2/3 left-0',
         },
         {
             title: 'Increased Accessibility:',
-            content: `The bot’s multi-language capabilities and
-voice-based interactions make it easier for nonnative speakers and less tech-savvy users to
-participate.`,
+            content: `Multi-language and voice features aid non-native 
+and less tech-savvy users participation`,
             customClass: 'top-2/3 right-0',
         },
         {
             title: 'Community-Driven Development:',
-            content: `With governance tokens, users have a voice in shaping the
-future of the platform, ensuring that the product evolves
-according to community needs.
+            content: `Governance tokens give users a voice in 
+shaping the platform's future.
 `,
             customClass:
                 'bottom-0 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2',
@@ -68,10 +64,10 @@ according to community needs.
                                     benefit.customClass
                                 }
                             >
-                                <span className="text-red text-base">
+                                <span className="text-red text-base md:text-xl text-center">
                                     {benefit.title}
                                 </span>
-                                <p className="text-base text-center">
+                                <p className="text-sm text-center w-4/5">
                                     {benefit.content}
                                 </p>
                             </div>

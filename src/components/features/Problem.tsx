@@ -16,22 +16,22 @@ function Problem() {
             subTitle:
                 'Traditional AMA sessions on Telegram have several challenges',
             items: [
-                'Limited Engagement: Text-based interactions can be monotonous and less engaging for users',
-                'Time-Consuming Moderation: Managing and moderating live sessions manually requires considerable effort and resources',
-                'Scalability Issues: Conducting multiple AMAs simultaneously is nearly impossible without significant human involvemen',
-                'Accessibility Barriers: Language limitations and the complexity of text can alienate non-native speakers and those with limited technical proficiency',
+                'Limited Engagement: Text-based interactions can be monotonous and less engaging for users.',
+                'Time-Consuming Moderation: Managing and moderating live sessions manually requires considerable effort and resources.',
+                'Scalability Issues: Conducting multiple AMAs simultaneously is nearly impossible without significant human involvement.',
+                'Accessibility Barriers: Language limitations and the complexity of text can alienate non-native speakers and those with limited technical proficiency.',
             ],
             note: 'These problems highlight the need for a more scalable, accessible, and engaging solution for AMA sessions.',
         },
         {
             title: 'The Solution',
             description: ``,
-            subTitle: 'Key features of Chatter Box include:',
+            subTitle: '',
             items: [
-                'Voice-Based Interaction: Users can ask questions and receive real-time voice responses from the bot.',
-                'AI-Driven Moderation: The bot handles the flow of conversation and manages the session efficiently without manual inpu',
-                `Customizable Personality: The bot’s tone and interaction style can be adapted to fit the brand or AMA host's personality`,
-                `Multi-Language Support: The bot supports multiple languages, making AMAs more accessible to a global audience.`,
+                `Chatter Box transforms text-based AMAs into interactive voice sessions, using NLP for real-time, 
+human-like responses. This boosts engagement, speeds up responses, supports multiple 
+languages, and enables simultaneous AMAS. scalability.
+`,
             ],
         },
     ];
@@ -58,21 +58,11 @@ function Problem() {
                                         (sectionIndex % 2 ? 'items-end' : '')
                                     }
                                 >
-                                    <div className="text-3xl font-bold">
+                                    <div className="text-3xl md:text-4xl font-bold">
                                         {section.title}
                                     </div>
-                                    <p
-                                        className={
-                                            'md:w-2/3 ' +
-                                            (sectionIndex % 2
-                                                ? 'text-right'
-                                                : '')
-                                        }
-                                    >
-                                        {section.description}
-                                    </p>
 
-                                    <div className="text-red text-xl">
+                                    <div className="text-red text-xl font-bold">
                                         {section.subTitle}
                                     </div>
 
@@ -80,7 +70,7 @@ function Problem() {
                                         className={
                                             'flex flex-col gap-2 ' +
                                             (sectionIndex % 2
-                                                ? 'w-4/5'
+                                                ? 'w-2/3'
                                                 : 'w-5/6')
                                         }
                                     >
@@ -95,13 +85,16 @@ function Problem() {
                                                                 : '')
                                                         }
                                                     >
-                                                        <img
-                                                            src={
-                                                                markIconSm.default
-                                                            }
-                                                            alt=""
-                                                            className="w-4 object-contain"
-                                                        />
+                                                        {!sectionIndex && (
+                                                            <img
+                                                                src={
+                                                                    markIconSm.default
+                                                                }
+                                                                alt=""
+                                                                className="w-4 object-contain"
+                                                            />
+                                                        )}
+
                                                         <p
                                                             className={
                                                                 'font-light text-sm ' +

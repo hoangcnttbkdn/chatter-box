@@ -29,8 +29,8 @@ function HowItWork() {
                             className="w-1/5 object-contain"
                         />
                         <div className="flex flex-col gap-2">
-                            <b className="text-xl text-red">For Text</b>
-                            <p className="w-2/3 text-sm">
+                            <b className="text-xl text-red">For Text:</b>
+                            <p className="w-2/3 text-xs">
                                 Simply type the question into the chat window.
                             </p>
                         </div>
@@ -41,39 +41,21 @@ function HowItWork() {
                             className="w-1/5 object-contain"
                         />
                         <div className="flex flex-col gap-2">
-                            <b className="text-xl text-red">For Voice</b>
-                            <p className="w-2/3 text-sm">
+                            <b className="text-xl text-red">For Voice:</b>
+                            <p className="w-2/3 text-xs">
                                 Use the microphone to ask the question aloud.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <p className="text-center">
-                    Powered by advanced natural language processing (NLP), the
-                    chatbot then instantly analyzes the question, recognizing
-                    context, intent, and keywords. Whether the question is in
-                    regards to factual information, need step-by-step guidance,
-                    or seeking recommendations, Chatter Box is designed to
-                    understand the query as if you’re conversing with a real
-                    person.
-                </p>
-                <p className="text-center">
-                    Once your question is processed, Chatter Box will leverage
-                    it’s vast knowledge base and AI-driven algorithms to
-                    generate a precise, informative response. If it’s a factual
-                    question, the bot will retrieve relevant information
-                    quickly. For more personalized or conversational queries, it
-                    dynamically formulates responses to provide the most useful
-                    and engaging answers.
-                </p>
-                <p className="text-center">
-                    Chatter Box is also designed to get smarter with every
-                    interaction and scale at the same time as the host’s
-                    project. It will learn from past conversations to improve
-                    its ability to understand and respond to future questions,
-                    and will seemingly incorporate new information and updates
-                    about the host’s project.
+                <p className="text-center text-sm leading-8">
+                    Chatter Box uses advanced NLP to instantly analyze
+                    questions, recognizing context, intent, and keywords. It
+                    provides precise responses for factual inquiries and
+                    formulates engaging answers for personalized queries. The
+                    bot learns from interactions to improve understanding and
+                    adapt to updates about the host's project
                 </p>
             </div>
         </>

@@ -12,40 +12,39 @@ function KeyFeature() {
     const features: Feature[] = [
         {
             title: 'Natural Language: Processing (NLP) and Voice AI',
-            content:
-                'The chatbot utilizes advanced NLP to understand user queries and generate contextually appropriate voice responses. This makes interactions more fluid and human-like, enhancing the overall user experience.',
+            content: `Enables the chatbot to provide fluid, human-like 
+voice responses, enhancing user experience`,
         },
         {
             title: 'Tokenized Ecosystem',
-            content:
-                'Our platform supports a native token ($CHAT), which can be used for staking, governance, and accessing premium features or exclusive AMA sessions.',
+            content: `Features a native token ($CHAT) for staking, 
+governance, and accessing premium AMA sessions`,
         },
         {
             title: 'Easy to Integrate and Use',
-            content:
-                'The chatbot is designed to integrate effortlessly into Telegram (other social networks such as X (formerly Twitter) are also planned).',
+            content: `Seamlessly integrates into Telegram, with plans for 
+other platforms like X`,
         },
         {
             title: ' Multilingual Support',
-            content:
-                'By integrating multiple languages, the chatbot  opens AMA sessions to a global audience, ensuring inclusivity and accessibilit',
+            content: `Multilingual support makes AMAs inclusive and 
+accessible to a global audience`,
         },
         {
             title: 'Real-Time AMA Moderation',
-            content:
-                'The bot can autonomously manage AMA sessions, moderating user questions and delivering instant, relevant responses, which reduces the need for human moderators.',
+            content: `Autonomously manages AMA sessions by moderating 
+questions and providing instant responses`,
         },
 
         {
             title: 'Automated AMA Sessions',
-            content:
-                'With automated AMA sessions, sessions can be held 24/7 or run simultaneously. This will allow for an AMA to be conducted in different languages at the same time and also reduce the need for additional hosts and resources.',
+            content: `24/7 sessions in multiple languages`,
         },
 
         {
             title: 'Customizable Personalities',
-            content:
-                'The personality of the bot can be tailored to reflect the preferences of the AMA host or brand, giving each session a unique flavor.',
+            content: `Choose your selected character or create your own 
+unique avatar personality based on your brand`,
         },
     ];
 
@@ -77,7 +76,7 @@ function KeyFeature() {
                                 alt=""
                                 className="w-5"
                             />
-                            <p className="font-light text-sm">
+                            <p className="font-light text-sm text-gray-300">
                                 {feature.content}
                             </p>
                         </div>
