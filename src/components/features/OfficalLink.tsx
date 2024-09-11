@@ -4,22 +4,27 @@ function OfficalLink() {
     const socials: {
         name: string;
         url: string;
+        img: string;
     }[] = [
         {
             name: 'Website',
             url: '########',
+            img: '/web.svg',
         },
         {
             name: 'Telegram',
             url: '########',
+            img: '/telegram.svg',
         },
         {
             name: 'Twitter',
-            url: '########',
+            url: '@AI_ChatterBOX',
+            img: '/X.svg',
         },
         {
             name: 'Etherscan',
             url: '########',
+            img: '/etherscan.png',
         },
     ];
     return (
@@ -57,8 +62,14 @@ function OfficalLink() {
                             return (
                                 <div
                                     key={'social-' + index}
-                                    className="flex flex-col gap-2 rounded-xl overflow-hidden p-4 px-10  relative text-white shadow-md"
+                                    className="flex flex-col gap-2 rounded-xl  p-4 px-10  relative text-white shadow-md"
                                 >
+                                    <img
+                                        src={social.img}
+                                        alt=""
+                                        className="absolute  w-12 h-12 rounded-full  top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-2/3"
+                                    />
+
                                     <img
                                         src={socialBg.default}
                                         alt=""

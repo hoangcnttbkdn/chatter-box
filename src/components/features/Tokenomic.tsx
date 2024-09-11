@@ -22,7 +22,7 @@ tokens to earn rewards for participation`,
         },
         {
             title: `Governance Rights:`,
-            content: ` Token holders 
+            content: `Token holders 
 can stake tokens to earn rewards for 
 participation`,
         },
