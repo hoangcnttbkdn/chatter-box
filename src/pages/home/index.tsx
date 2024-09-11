@@ -1,14 +1,14 @@
-import Section from '../../components/ui/section';
-import AboutUs from '../../components/features/AboutUs';
-import KeyFeature from '../../components/features/KeyFeature';
-import OfficalLink from '../../components/features/OfficalLink';
-import Roadmap from '../../components/features/roadmap';
-import './home.scss';
 import About from '../../components/features/About';
-import Problem from '../../components/features/Problem';
+import AboutUs from '../../components/features/AboutUs';
 import Benefit from '../../components/features/Benefit';
 import HowItWork from '../../components/features/HowItWork';
+import KeyFeature from '../../components/features/KeyFeature';
+import OfficalLink from '../../components/features/OfficalLink';
+import Problem from '../../components/features/Problem';
+import Roadmap from '../../components/features/roadmap';
 import Tokenomic from '../../components/features/Tokenomic';
+import Section from '../../components/ui/section';
+import './home.scss';
 
 function HomePage() {
     return (
@@ -26,14 +26,18 @@ function HomePage() {
             </Section>
 
             <Section
-                id='about'
+                id="about"
                 title=""
                 customClassName="relative flex justify-center items-center"
             >
                 <About></About>
             </Section>
 
-            <Section id='problem' title="" className="relative max-w-6xl mx-auto px-8">
+            <Section
+                id="problem"
+                title=""
+                className="relative max-w-6xl mx-auto px-8"
+            >
                 <Problem></Problem>
             </Section>
 

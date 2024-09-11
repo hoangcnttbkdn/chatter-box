@@ -15,10 +15,10 @@ function Roadmap() {
             time: 'Q4 2024',
             description: 'Launch and ProductDevelopment and Marketing',
             todos: [
-                `Build the core Chatter Box AI Chat systemwith integrated NLP and voice response capabilities.`,
-                `Launch initial Telegram AMA sessions using the botfor a closed group of beta users.`,
+                `Build the core Chatter Box AI Chat systemwith integrated NLP and voice response capabilities`,
+                `Launch initial Telegram AMA sessions using the botfor a closed group of beta users`,
                 `Some early features such as text to voice translationto be made available for community testing`,
-                `Develop token utility features,including staking and governance.`,
+                `Develop token utility features,including staking and governance`,
                 `Initial marketing and promotion by generating interestswith large and established projects on`,
             ],
         },
@@ -32,7 +32,7 @@ function Roadmap() {
                 `Detailed dashboard for Chatter Box hosts for analyticsand review of each AMA session`,
                 `Expand the availability of the bot to support othersocial networks such as X (formally Twitter)`,
                 `Onboard inﬂuencers, crypto projects,and brands for AMA sessions`,
-                `Launch premium AMA sessions andoffer customizable bot personalities for hosts.`,
+                `Launch premium AMA sessions andoffer customizable bot personalities for hosts`,
                 `Implement basic revenue sharing for $CHAT holders`,
             ],
         },
@@ -41,9 +41,9 @@ function Roadmap() {
             time: 'Q2 2025',
             description: 'Token Integration',
             todos: [
-                `Implement token staking, additional rewards,and premium access features.`,
-                `Develop the governance framework to allow tokenholders to participate in key platform decisions.`,
-                `Introduce multi-chain support for broader token utilityacross various ecosystems.`,
+                `Implement token staking, additional rewards,and premium access features`,
+                `Develop the governance framework to allow tokenholders to participate in key platform decisions`,
+                `Introduce multi-chain support for broader token utilityacross various ecosystems`,
             ],
         },
         {
@@ -51,9 +51,9 @@ function Roadmap() {
             time: 'Q3 2025',
             description: 'Global Expansion & Full Launch',
             todos: [
-                `Scale the platform to support a global user base with24/7 multilingual AI interactions.`,
+                `Scale the platform to support a global user base with24/7 multilingual AI interactions`,
                 `Host large-scale AMA events in partnershipwith major crypto projects and influencers`,
-                `Implement user-driven platform improvements throughgovernance votes and community feedback.`,
+                `Implement user-driven platform improvements throughgovernance votes and community feedback`,
             ],
         },
     ];
@@ -84,15 +84,15 @@ function Roadmap() {
                         />
                         <div
                             className={
-                                'flex flex-col my-2 relative z-10 ' +
+                                'flex flex-col my-2 relative z-10 gap-2 pb-2 ' +
                                 (mileStoneIndex % 2
                                     ? 'items-start'
                                     : 'items-end')
                             }
                         >
                             <b className="text-2xl">{milestone.title}</b>
-                            <b className="text-sm">{milestone.time}</b>
-                            <p className="text-sm"> {milestone.description}</p>
+                            <b className="text-md">{milestone.time}</b>
+                            <p className="text-md"> {milestone.description}</p>
                         </div>
 
                         <div className="flex flex-col gap-2">
@@ -101,7 +101,7 @@ function Roadmap() {
                                     <div
                                         key={'milestone-todo' + index}
                                         className={
-                                            'flex gap-2  ' +
+                                            'flex gap-2 ' +
                                             (mileStoneIndex % 2
                                                 ? ''
                                                 : 'flex-row-reverse text-end')
@@ -112,7 +112,7 @@ function Roadmap() {
                                             alt=""
                                             className="w-4 object-contain"
                                         />
-                                        <p className="font-light text-xs leading-5">
+                                        <p className="font-light text-md leading-6">
                                             {todo}
                                         </p>
                                     </div>

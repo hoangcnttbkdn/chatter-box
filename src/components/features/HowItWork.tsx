@@ -30,7 +30,7 @@ function HowItWork() {
                         />
                         <div className="flex flex-col gap-2">
                             <b className="text-xl text-red">For Text:</b>
-                            <p className="w-2/3 text-xs">
+                            <p className="w-2/3 text-sm">
                                 Simply type the question into the chat window.
                             </p>
                         </div>
@@ -42,14 +42,14 @@ function HowItWork() {
                         />
                         <div className="flex flex-col gap-2">
                             <b className="text-xl text-red">For Voice:</b>
-                            <p className="w-2/3 text-xs">
+                            <p className="w-2/3 text-sm">
                                 Use the microphone to ask the question aloud.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <p className="text-center text-sm leading-8">
+                <p className="text-center text-xl leading-8">
                     Chatter Box uses advanced NLP to instantly analyze
                     questions, recognizing context, intent, and keywords. It
                     provides precise responses for factual inquiries and

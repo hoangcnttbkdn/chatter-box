@@ -4,7 +4,7 @@ import * as box from '../../assets/images/box.png';
 function AboutUs() {
     return (
         <div className="flex flex-col gap-2 w-full ">
-            <div className="absolute md:h-1/2  left-1/2 -translate-x-1/2 -translate-y-[10%] z-10">
+            <div className="absolute md:w-1/2  left-1/2 -translate-x-1/2 -translate-y-[1%] z-10">
                 <img src="page1/visual logo.png" className="w-2/3 mx-auto" />
             </div>
 

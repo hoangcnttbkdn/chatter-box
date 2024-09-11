@@ -76,7 +76,7 @@ unique avatar personality based on your brand`,
                                 alt=""
                                 className="w-5"
                             />
-                            <p className="font-light text-sm text-gray-300">
+                            <p className="font-light text-base text-gray-300">
                                 {feature.content}
                             </p>
                         </div>

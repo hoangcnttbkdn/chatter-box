@@ -196,3 +196,122 @@ body {
         transform: translateX(-100%);
     }
 }
+
+.black-red-gradient-bg {
+    background: rgb(36, 0, 0);
+    background: linear-gradient(
+        115deg,
+        rgba(36, 0, 0, 1) 0%,
+        rgba(239, 51, 18, 1) 0%,
+        rgba(113, 0, 0, 1) 22%,
+        rgba(0, 0, 0, 1) 75%,
+        rgba(215, 78, 24, 1) 100%
+    );
+}
+
+.nav-item {
+    background-image: linear-gradient(to right, white, white 50%, #000 50%);
+    background-size: 200% 100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    &::before {
+        content: '';
+        background: #f15634;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        background-position: -100%;
+        background-image: linear-gradient(
+            to right,
+            #d65454,
+            #d65454 50%,
+            #f15634 50%
+        );
+
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300);
+
+.offical-links {
+    .card {
+        display: inline-block;
+        @for $i from 1 through 4 {
+            &:nth-of-type(#{$i}) {
+                animation: intro 1s ($i * 0.1s) forwards;
+            }
+        }
+        transform: scale(0);
+        position: relative;
+        transition: all 0.2s;
+        cursor: pointer;
+        opacity: 0.8;
+        box-shadow: 0px 17px 46px -10px #777777;
+        border-radius: 14px;
+
+        &:hover .card_inner__circle img {
+            animation: spin 0.7s forwards;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        &_inner {
+            &__circle {
+                overflow: hidden;
+                z-index: 10;
+                box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.28);
+                border: 1px solid rgb(255, 255, 255);
+                img {
+                    height: 38px;
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(720deg) translate(-50%, -50%);
+    }
+}
+
+@keyframes intro {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        transform: scale(1.06);
+    }
+    50% {
+        transform: scale(0.965);
+    }
+    75% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

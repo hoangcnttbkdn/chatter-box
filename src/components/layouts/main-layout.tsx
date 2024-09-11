@@ -1,39 +1,57 @@
 import { Outlet } from 'react-router-dom';
 import '../../global.scss';
 
+interface NavItem {
+    href: string;
+    name: string;
+    key?: string;
+}
+
 function MainLayout() {
+    const navItems: NavItem[] = [
+        { href: 'about-us', name: 'About' },
+        { href: 'feature', name: 'Features' },
+        { href: 'benefit', name: 'Benefits' },
+        { href: '', name: '', key: 'logo' },
+        { href: 'roadmap', name: 'Roadmap' },
+        { href: 'tokenomic', name: 'Tokenomics' },
+        { href: 'social', name: 'Socials' },
+    ];
+    const hasKeyItem = navItems.some((item) => item.key !== undefined);
+
     return (
         <main className="bg-black text-white md:min-h-screen">
             <nav className="w-100 px-8 md:px-auto sticky top-0 z-50 backdrop-blur">
                 <div className="py-4 md:py-6 mx-auto md:px-4 container flex items-center justify-center flex-wrap md:flex-nowrap">
-                    <div className="text-gray-500 order-3 w-full md:w-auto md:order-2 ">
-                        <ul className="flex font-semibold justify-between  rounded-sm">
-                            <li className="md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl">
-                                <a href="#about-us">About</a>
-                            </li>
-                            <li className="md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl">
-                                <a href="#feature">Features</a>
-                            </li>
-                            <li className="md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl">
-                                <a href="#benefit">Benefits</a>
-                            </li>
-                            <div className="hidden md:flex items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white">
-                                <span> Chatter</span>
-                                <span className="text-red">Box</span>
-                            </div>
-                            <li className="md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl">
-                                <a href="#roadmap">Roadmap</a>
-                            </li>
-                            <li className="md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl">
-                                <a href="#tokenomic">Tokenomics</a>
-                            </li>
-                            <li className="md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl">
-                                <a href="#social">Socials</a>
-                            </li>
+                    <div
+                        className={`text-gray-500 ${
+                            hasKeyItem
+                                ? 'order-3 w-full md:w-auto md:order-2'
+                                : 'order-1 w-full'
+                        } flex flex-wrap justify-center md:justify-between`}
+                    >
+                        <ul className="flex font-semibold justify-between rounded-sm gap-2 md:gap-4">
+                            {navItems.map((item) =>
+                                item.key ? (
+                                    <div className="hidden md:flex items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white">
+                                        <span>Chatter</span>
+                                        <span className="text-red">Box</span>
+                                    </div>
+                                ) : (
+                                    <li
+                                        key={item.href}
+                                        className="nav-item cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl "
+                                    >
+                                        <a href={`#${item.href}`}>
+                                            {item.name}
+                                        </a>
+                                    </li>
+                                )
+                            )}
                         </ul>
                     </div>
-                    <div className=" flex md:hidden items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white">
-                        <span> Chatter</span>
+                    <div className="flex md:hidden items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white">
+                        <span>Chatter</span>
                         <span className="text-red">Box</span>
                     </div>
                 </div>

@@ -5,6 +5,11 @@ import * as commentFrame2 from '../../assets/images/page/comment 2.png';
 
 import * as logo from '../../assets/images/page/logo.png';
 
+interface InfoItem {
+    label: string;
+    value: string;
+}
+
 function Tokenomic() {
     const purposes: {
         title: string;
@@ -16,12 +21,12 @@ function Tokenomic() {
 AMA sessions`,
         },
         {
-            title: `Staking Rewards:`,
+            title: `Staking Rewards`,
             content: `Token holders can stake 
 tokens to earn rewards for participation`,
         },
         {
-            title: `Governance Rights:`,
+            title: `Governance Rights`,
             content: `Token holders 
 can stake tokens to earn rewards for 
 participation`,
@@ -33,11 +38,20 @@ can use tokens for custom Chatter
 Box features`,
         },
         {
-            title: `Revenue share:`,
+            title: `Revenue share`,
             content: `Token holders can share in 
 Chatter Box's revenue`,
         },
     ];
+
+    const infoList: InfoItem[] = [
+        { label: 'Supply', value: '100M' },
+        { label: 'Name', value: 'Chatter Box' },
+        { label: 'Ticket', value: 'CHAT' },
+        { label: 'LP', value: 'Locked' },
+        { label: 'Contract', value: 'Renounced' },
+    ];
+
     return (
         <>
             <div className="relative z-10 max-w-6xl mx-auto px-20 md:px-4 sm:grid grid-cols-2 md:grid-cols-3 items-center gap-8">
@@ -46,26 +60,16 @@ Chatter Box's revenue`,
                         src={commentFrame1.default}
                         className="object-contain"
                     />
-                    <div className="absolute w-full top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-                        <div className="text-red md:text-base font-bold">
+                    <div className="absolute w-full top-1/3 pt-4 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
+                        <div className="text-red md:text-xl font-bold">
                             Token Distrubution
                         </div>
                         <div className="flex flex-col items-center">
-                            <span className="text-sm">
-                                Supply: <b>100M</b>
-                            </span>
-                            <span className="text-sm">
-                                Name: <b>Chatter Box</b>
-                            </span>
-                            <span className="text-sm">
-                                Ticket: <b>CHAT</b>
-                            </span>
-                            <span className="text-sm">
-                                LP: <b>Locked</b>
-                            </span>
-                            <span className="text-sm">
-                                Contract: <b>Renounced</b>
-                            </span>
+                            {infoList.map((item, index) => (
+                                <span key={index} className="text-md">
+                                    {item.label}: <b>{item.value}</b>
+                                </span>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -79,8 +83,10 @@ Chatter Box's revenue`,
                         className="object-contain"
                     />
                     <div className="absolute w-full top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2">
-                        <div className="text-red md:text-xl">Tax Structure</div>
-                        <span className="text-2xl md:text-4xl">5/5</span>
+                        <div className="text-red font-bold md:text-xl">
+                            Tax Structure
+                        </div>
+                        <span className="text-2xl md:text-5xl font-bold">5/5</span>
                     </div>
                 </div>
             </div>
@@ -116,7 +122,7 @@ Chatter Box's revenue`,
                     </div>
                 </div>
                 <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-10 bg-black px-10">
-                    <div className="text-orange text-xl md:text-xl flex items-end justify-start">
+                    <div className="text-orange text-xl md:text-2xl flex items-end justify-start">
                         The native token ($CHAT) on our platform will serve
                         several purposes:
                     </div>
@@ -124,8 +130,8 @@ Chatter Box's revenue`,
                         return (
                             <>
                                 <div className="bg-dark-gray rounded-md p-6">
-                                    <b className="text-sm">{purpose.title}: </b>
-                                    <span className="text-sm">
+                                    <b className="text-md">{purpose.title}: </b>
+                                    <span className="text-md">
                                         {purpose.content}
                                     </span>
                                 </div>

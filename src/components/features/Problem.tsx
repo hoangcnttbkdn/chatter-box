@@ -16,10 +16,10 @@ function Problem() {
             subTitle:
                 'Traditional AMA sessions on Telegram have several challenges',
             items: [
-                'Limited Engagement: Text-based interactions can be monotonous and less engaging for users.',
-                'Time-Consuming Moderation: Managing and moderating live sessions manually requires considerable effort and resources.',
-                'Scalability Issues: Conducting multiple AMAs simultaneously is nearly impossible without significant human involvement.',
-                'Accessibility Barriers: Language limitations and the complexity of text can alienate non-native speakers and those with limited technical proficiency.',
+                'Limited Engagement',
+                'Time-Consuming Moderation',
+                'Scalability Issues',
+                'Accessibility Barriers',
             ],
             note: 'These problems highlight the need for a more scalable, accessible, and engaging solution for AMA sessions.',
         },
@@ -97,7 +97,7 @@ languages, and enables simultaneous AMAS. scalability.
 
                                                         <p
                                                             className={
-                                                                'font-light text-sm ' +
+                                                                'font-light text-xl ' +
                                                                 (sectionIndex %
                                                                 2
                                                                     ? 'text-right'
@@ -111,7 +111,7 @@ languages, and enables simultaneous AMAS. scalability.
                                             );
                                         })}
                                     </div>
-                                    <i className="font-light text-xs text-gray-500">
+                                    <i className="font-light text-md text-gray-500">
                                         {section.note}
                                     </i>
                                 </div>

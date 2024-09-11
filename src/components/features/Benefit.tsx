@@ -35,10 +35,10 @@ and less tech-savvy users participation`,
         {
             title: 'Community-Driven Development:',
             content: `Governance tokens give users a voice in 
-shaping the platform's future.
+shaping the platform's future
 `,
             customClass:
-                'bottom-0 left-1/2 md:-translate-x-1/2 md:-translate-y-1/2',
+                'bottom-0 left-1/2 md:-translate-x-1/2 md:-translate-y-1/3',
         },
     ];
     return (
@@ -64,10 +64,10 @@ shaping the platform's future.
                                     benefit.customClass
                                 }
                             >
-                                <span className="text-red text-base md:text-xl text-center">
+                                <span className="text-red text-xl md:text-2xl text-center">
                                     {benefit.title}
                                 </span>
-                                <p className="text-sm text-center w-4/5">
+                                <p className="text-md text-center w-4/5">
                                     {benefit.content}
                                 </p>
                             </div>
