@@ -110,18 +110,17 @@ Chatter Box's revenue`,
                             src={chart.default}
                             className="w-4/5 m-auto z-20"
                         />
-                        <div className="flex flex-col items-start gap-8 text-base relative left-4 md:left-10">
-                            <p className="flex items-center gap-2">
-                                <div className="line line--break-top"></div>
-                                <b>5%</b> Marketing /
-                                <br className="block md:hidden"></br>
-                                Partnership
-                            </p>
-                            <p className="flex items-center gap-2">
-                                <div className="line line--break-top"></div>{' '}
-                                <b>10%</b> Staking
-                            </p>
-                        </div>
+                        <p className="flex items-center gap-2 absolute top-0 left-1/2 translate-x-1/4">
+                            <div className="line"></div>
+                            <b>5%</b> Marketing /
+                            <br className="block md:hidden"></br>
+                            Partnership
+                        </p>
+
+                        <p className="flex items-center gap-2 absolute top-1/3 left-2/3 translate-x-[15%]">
+                            <div className="line line--break-top"></div>{' '}
+                            <b>10%</b> Staking
+                        </p>
                     </div>
                 </div>
                 <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-3 gap-4 md:gap-10 bg-black px-10">

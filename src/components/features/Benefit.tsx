@@ -10,14 +10,14 @@ function Benefit() {
             title: 'Scalability:',
             content: `Voice interactions enhance natural 
 exchanges, boosting user retention and 
-participation in AMAS at scale`,
+participation in AMAs at scale`,
             customClass: 'top-1/4  right-0',
         },
         {
             title: 'Enhanced User Engagement:',
             content: `Voice interactions enhance natural 
 exchanges, boosting user retention and 
-participation in AMAS`,
+participation in AMAs`,
             customClass: 'top-1/4 left-0',
         },
         {
