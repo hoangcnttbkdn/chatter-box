@@ -63,7 +63,7 @@ unique avatar personality based on your brand`,
                 <img
                     src={message.default}
                     alt=""
-                    className=" moving-left-right absolute bottom-0 right-0 w-1/5 -translate-x-1/2  translate-y-1/3"
+                    className="moving-left-right absolute -bottom-12 right-0 w-1/4"
                 />
                 {features.map((feature, index) => (
                     <div key={index} className="p-4 rounded-lg shadow-md">

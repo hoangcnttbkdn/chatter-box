@@ -4,6 +4,7 @@ import * as commentFrame1 from '../../assets/images/page/comment 1.png';
 import * as commentFrame2 from '../../assets/images/page/comment 2.png';
 
 import * as logo from '../../assets/images/page/logo.png';
+import FeatureCard from '../common/featureCard';
 
 interface InfoItem {
     label: string;
@@ -86,7 +87,9 @@ Chatter Box's revenue`,
                         <div className="text-red font-bold md:text-xl">
                             Tax Structure
                         </div>
-                        <span className="text-2xl md:text-5xl font-bold">5/5</span>
+                        <span className="text-2xl md:text-5xl font-bold">
+                            5/5
+                        </span>
                     </div>
                 </div>
             </div>
@@ -129,12 +132,10 @@ Chatter Box's revenue`,
                     {purposes?.map((purpose) => {
                         return (
                             <>
-                                <div className="bg-dark-gray rounded-md p-6">
-                                    <b className="text-md">{purpose.title}: </b>
-                                    <span className="text-md">
-                                        {purpose.content}
-                                    </span>
-                                </div>
+                                <FeatureCard
+                                    title={purpose.title}
+                                    content={purpose.content}
+                                ></FeatureCard>
                             </>
                         );
                     })}
