@@ -13,7 +13,7 @@ import './home.scss';
 function HomePage() {
     return (
         <>
-            <Section id="about-us" title="" customClassName='overflow-hidden'>
+            <Section id="about-us" title="" customClassName='overflow-hidden md:pt-0'>
                 <AboutUs></AboutUs>
             </Section>
 
