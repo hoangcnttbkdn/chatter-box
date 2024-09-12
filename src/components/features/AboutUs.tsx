@@ -48,10 +48,14 @@ function AboutUs() {
                     <img
                         src="page1/visual logo.png"
                         className="w-2/3 mx-auto"
+                        data-aos="fade-up"
                     />
                 </div>
 
-                <div className="absolute top-0 left-0  w-full h-full">
+                <div
+                    data-aos="fade-up"
+                    className="absolute top-0 left-0  w-full h-full"
+                >
                     <div className="grid items-center justify-center grid-cols-2 grid-rows-2">
                         {cubes?.map((_, index) => {
                             return (

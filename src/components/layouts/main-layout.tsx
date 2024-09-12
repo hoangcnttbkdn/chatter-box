@@ -1,5 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import '../../global.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS animations styles
+import { useEffect } from 'react';
 
 interface NavItem {
     href: string;
@@ -8,6 +11,10 @@ interface NavItem {
 }
 
 function MainLayout() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     const navItems: NavItem[] = [
         { href: 'about-us', name: 'About' },
         { href: 'feature', name: 'Features' },
@@ -34,6 +41,7 @@ function MainLayout() {
                             {navItems.map((item, index) =>
                                 item.key ? (
                                     <div
+                                        data-aos="fade-up"
                                         key={'nav' + index}
                                         className="hidden md:flex items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white"
                                     >
@@ -42,6 +50,7 @@ function MainLayout() {
                                     </div>
                                 ) : (
                                     <li
+                                        data-aos="fade-up"
                                         key={item.href}
                                         className="nav-item cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl "
                                     >

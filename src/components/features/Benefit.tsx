@@ -59,6 +59,9 @@ shaping the platform's future
                         return (
                             <div
                                 key={'benefit' + index}
+                                data-aos={
+                                    index * 2 ? 'fade-up-left' : 'fade-up-right'
+                                }
                                 className={
                                     ' z-10 flex flex-col gap-2 items-center justify-center mx-auto md:w-3/4 ' +
                                     benefit.customClass

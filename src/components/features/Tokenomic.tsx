@@ -62,7 +62,7 @@ Chatter Box's revenue`,
     return (
         <>
             <div className="relative z-10 overflow-hidden max-w-6xl mx-auto px-10 md:px-4 sm:grid grid-cols-2 md:grid-cols-3 items-center gap-8">
-                <div className="relative ">
+                <div data-aos="fade-up-right" className="relative ">
                     <img
                         src={commentFrame1.default}
                         className="object-contain"
@@ -81,10 +81,11 @@ Chatter Box's revenue`,
                     </div>
                 </div>
                 <img
+                    data-aos="fade-up"
                     src={logo.default}
                     className="object-contain hidden md:block"
                 />
-                <div className="relative px-10 md:px-0">
+                <div data-aos="fade-up-left" className="relative px-10 md:px-0">
                     <img
                         src={commentFrame2.default}
                         className="object-contain"
@@ -100,7 +101,10 @@ Chatter Box's revenue`,
                 </div>
             </div>
 
-            <div className="relative flex flex-col gap-4 md:gap-10">
+            <div
+                data-aos="fade-up-right"
+                className="relative flex flex-col gap-4 md:gap-10"
+            >
                 <div className="absolute top-0 -translate-y-1/4">
                     <img src={circleBg.default} className="shake-animation " />
                 </div>
@@ -110,7 +114,7 @@ Chatter Box's revenue`,
                         <img
                             data-aos="flip-right"
                             data-aos-duration="2000"
-                            src='/statisc.png'
+                            src="/statisc.png"
                             className="w-3/5 m-auto z-20"
                         />
                     </div>
