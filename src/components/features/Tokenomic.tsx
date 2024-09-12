@@ -1,13 +1,12 @@
-import * as chart from '../../assets/images/page/chart.png';
 import * as circleBg from '../../assets/images/page/circle background.png';
 import * as commentFrame1 from '../../assets/images/page/comment 1.png';
 import * as commentFrame2 from '../../assets/images/page/comment 2.png';
 
-import * as logo from '../../assets/images/page/logo.png';
-import FeatureCard from '../common/featureCard';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // AOS animations styles
 import { useEffect } from 'react';
+import * as logo from '../../assets/images/page/logo.png';
+import FeatureCard from '../common/featureCard';
 
 interface InfoItem {
     label: string;
