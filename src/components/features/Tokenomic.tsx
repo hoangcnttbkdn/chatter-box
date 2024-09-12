@@ -55,7 +55,7 @@ Chatter Box's revenue`,
 
     return (
         <>
-            <div className="relative z-10 max-w-6xl mx-auto px-20 md:px-4 sm:grid grid-cols-2 md:grid-cols-3 items-center gap-8">
+            <div className="relative z-10 overflow-hidden max-w-6xl mx-auto px-20 md:px-4 sm:grid grid-cols-2 md:grid-cols-3 items-center gap-8">
                 <div className="relative ">
                     <img
                         src={commentFrame1.default}
@@ -100,8 +100,8 @@ Chatter Box's revenue`,
                 </div>
 
                 <div className="relative z-10">
-                    <div className="grid grid-cols-2 md:grid-cols-3 items-center justify-center w-full">
-                        <p className="col-span-2 col-start-2 md:col-start-1 md:col-span-1 text-center text-xl md:text-3xl flex items-center gap-4 justify-end flex-row-reverse md:flex-row">
+                    <div className="grid grid-cols-3 items-center justify-center w-full">
+                        <p className=" col-start-1 col-span-1 text-center text-sm md:text-3xl flex items-center gap-2 md:gap-4 justify-end flex-row">
                             <b>85%</b> LP
                             <div className="line"></div>
                         </p>
@@ -110,15 +110,13 @@ Chatter Box's revenue`,
                             src={chart.default}
                             className="w-4/5 m-auto z-20"
                         />
-                        <p className="flex items-center gap-2 absolute top-0 left-1/2 translate-x-1/4">
+                        <p className="flex items-center gap-2 absolute top-0 left-[55%] translate-x-1/6 md:translate-x-1/4 text-xs md:text-base">
                             <div className="line"></div>
-                            <b>5%</b> Marketing /
-                            <br className="block md:hidden"></br>
-                            Partnership
+                            <b>5%</b> Marketing / Partnership
                         </p>
 
-                        <p className="flex items-center gap-2 absolute top-1/3 left-2/3 translate-x-[15%]">
-                            <div className="line line--break-top"></div>{' '}
+                        <p className="flex items-center gap-2 absolute top-[20%] md:top-1/3 left-1/2 md:left-2/3 translate-x-2/3 md:translate-x-[15%] text-xs md:text-base">
+                            <div className="line md:line--break-top"></div>{' '}
                             <b>10%</b> Staking
                         </p>
                     </div>

@@ -5,7 +5,7 @@ import HowItWork from '../../components/features/HowItWork';
 import KeyFeature from '../../components/features/KeyFeature';
 import OfficalLink from '../../components/features/OfficalLink';
 import Problem from '../../components/features/Problem';
-import Roadmap from '../../components/features/roadmap';
+import Roadmap from '../../components/features/Roadmap';
 import Tokenomic from '../../components/features/Tokenomic';
 import Section from '../../components/ui/section';
 import './home.scss';
@@ -13,7 +13,7 @@ import './home.scss';
 function HomePage() {
     return (
         <>
-            <Section id="about-us" title="">
+            <Section id="about-us" title="" customClassName='overflow-hidden'>
                 <AboutUs></AboutUs>
             </Section>
 
@@ -52,7 +52,7 @@ function HomePage() {
             <Section
                 id="howitwork"
                 title="How it Works"
-                customClassName="max-w-6xl mx-auto px-8 relative"
+                customClassName="max-w-6xl mx-auto px-8 relative overflow-hidden"
             >
                 <HowItWork></HowItWork>
             </Section>
@@ -60,7 +60,7 @@ function HomePage() {
             <Section
                 id="tokenomic"
                 title="Tokenomics and Utility - $CHAT"
-                customClassName="relative"
+                customClassName="relative overflow-hidden"
             >
                 <Tokenomic></Tokenomic>
             </Section>
@@ -68,7 +68,7 @@ function HomePage() {
             <Section id="roadmap" title="Roadmap" customClassName="relative">
                 <Roadmap></Roadmap>
             </Section>
-            <Section id="social" title="" customClassName="relative">
+            <Section id="social" title="" customClassName="relative overflow-hidden">
                 <OfficalLink></OfficalLink>
             </Section>
         </>
