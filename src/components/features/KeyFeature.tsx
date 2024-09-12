@@ -80,7 +80,7 @@ unique avatar personality based on your brand`,
                         className="p-4 rounded-lg shadow-md"
                         data-aos="fade-up"
                     >
-                        <h3 className="text-base font-bold mb-2">
+                        <h3 className="text-xl font-bold mb-2">
                             {feature.title}
                         </h3>
                         <div className="flex gap-2">
@@ -89,7 +89,7 @@ unique avatar personality based on your brand`,
                                 alt=""
                                 className="w-5"
                             />
-                            <p className="font-light text-base text-gray-300">
+                            <p className="font-light text-xl text-gray-300">
                                 {feature.content}
                             </p>
                         </div>
