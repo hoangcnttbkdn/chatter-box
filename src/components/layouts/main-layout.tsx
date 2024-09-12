@@ -41,7 +41,6 @@ function MainLayout() {
                             {navItems.map((item, index) =>
                                 item.key ? (
                                     <div
-                                        data-aos="fade-up"
                                         key={'nav' + index}
                                         className="hidden md:flex items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white"
                                     >
@@ -50,7 +49,6 @@ function MainLayout() {
                                     </div>
                                 ) : (
                                     <li
-                                        data-aos="fade-up"
                                         key={item.href}
                                         className="nav-item cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl "
                                     >
