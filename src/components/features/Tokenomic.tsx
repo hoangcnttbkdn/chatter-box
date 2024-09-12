@@ -106,7 +106,7 @@ Chatter Box's revenue`,
                 className="relative flex flex-col gap-4 md:gap-10"
             >
                 <div className="absolute top-0 -translate-y-1/4">
-                    <img src={circleBg.default} className="shake-animation " />
+                    <img src={circleBg.default} />
                 </div>
 
                 <div className="relative z-10">
