@@ -29,7 +29,7 @@ function MainLayout() {
     return (
         <main className="bg-black text-white md:min-h-screen">
             <nav className="w-100 px-8 md:px-auto sticky top-0 z-50 backdrop-blur">
-                <div className="py-4 md:py-6 mx-auto md:px-4 container flex items-center justify-center flex-wrap md:flex-nowrap">
+                <div className="py-4 md:py-4 mx-auto md:px-4 container flex items-center justify-center flex-wrap md:flex-nowrap">
                     <div
                         className={`text-gray-500 ${
                             hasKeyItem
@@ -42,7 +42,7 @@ function MainLayout() {
                                 item.key ? (
                                     <div
                                         key={'nav' + index}
-                                        className="hidden md:flex items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white"
+                                        className="hidden md:flex items-center gap-2 text-2xl md:text-3xl px-2 font-bold text-white"
                                     >
                                         <span>Chatter</span>
                                         <span className="text-red">Box</span>
@@ -50,7 +50,7 @@ function MainLayout() {
                                 ) : (
                                     <li
                                         key={item.href}
-                                        className="nav-item cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-base lg:text-xl "
+                                        className="nav-item cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-md lg:text-base "
                                     >
                                         <a href={`#${item.href}`}>
                                             {item.name}
