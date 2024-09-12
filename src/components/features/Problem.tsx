@@ -50,73 +50,67 @@ languages, and enables simultaneous AMAS. scalability.
             <div className="flex flex-col gap-4 md:gap-16">
                 {problems?.map((section, sectionIndex) => {
                     return (
-                        <>
-                            {
-                                <div
-                                    className={
-                                        'relative flex flex-col gap-2 ' +
-                                        (sectionIndex % 2 ? 'items-end' : '')
-                                    }
-                                >
-                                    <div className="text-3xl md:text-4xl font-bold">
-                                        {section.title}
-                                    </div>
-
-                                    <div className="text-red text-xl font-bold">
-                                        {section.subTitle}
-                                    </div>
-
-                                    <div
-                                        className={
-                                            'flex flex-col gap-2 ' +
-                                            (sectionIndex % 2
-                                                ? 'w-2/3'
-                                                : 'w-5/6')
-                                        }
-                                    >
-                                        {section.items?.map((item) => {
-                                            return (
-                                                <>
-                                                    <div
-                                                        className={
-                                                            'flex gap-2 ' +
-                                                            (sectionIndex % 2
-                                                                ? 'flex-row-reverse'
-                                                                : '')
-                                                        }
-                                                    >
-                                                        {!sectionIndex && (
-                                                            <img
-                                                                src={
-                                                                    markIconSm.default
-                                                                }
-                                                                alt=""
-                                                                className="w-4 object-contain"
-                                                            />
-                                                        )}
-
-                                                        <p
-                                                            className={
-                                                                'font-light text-xl ' +
-                                                                (sectionIndex %
-                                                                2
-                                                                    ? 'text-right'
-                                                                    : '')
-                                                            }
-                                                        >
-                                                            {item}
-                                                        </p>
-                                                    </div>
-                                                </>
-                                            );
-                                        })}
-                                    </div>
-                                    <i className="font-light text-md text-gray-500">
-                                        {section.note}
-                                    </i>
-                                </div>
+                        <div
+                            key={'problem_' + sectionIndex}
+                            data-aos="fade-up"
+                            className={
+                                'relative flex flex-col gap-2 ' +
+                                (sectionIndex % 2 ? 'items-end' : '')
                             }
-                        </>
+                        >
+                            <div className="text-3xl md:text-4xl font-bold">
+                                {section.title}
+                            </div>
+
+                            <div className="text-red text-xl font-bold">
+                                {section.subTitle}
+                            </div>
+
+                            <div
+                                className={
+                                    'flex flex-col gap-2 ' +
+                                    (sectionIndex % 2 ? 'w-2/3' : 'w-5/6')
+                                }
+                            >
+                                {section.items?.map(
+                                    (item, sectionItemIndex) => {
+                                        return (
+                                            <div
+                                                key={'item_' + sectionItemIndex}
+                                                className={
+                                                    'flex gap-2 ' +
+                                                    (sectionIndex % 2
+                                                        ? 'flex-row-reverse'
+                                                        : '')
+                                                }
+                                            >
+                                                {!sectionIndex && (
+                                                    <img
+                                                        src={markIconSm.default}
+                                                        alt=""
+                                                        className="w-4 object-contain"
+                                                    />
+                                                )}
+
+                                                <p
+                                                    className={
+                                                        'font-light text-xl ' +
+                                                        (sectionIndex % 2
+                                                            ? 'text-right'
+                                                            : '')
+                                                    }
+                                                >
+                                                    {item}
+                                                </p>
+                                            </div>
+                                        );
+                                    }
+                                )}
+                            </div>
+                            <i className="font-light text-md text-gray-500">
+                                {section.note}
+                            </i>
+                        </div>
                     );
                 })}
             </div>

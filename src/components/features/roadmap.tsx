@@ -69,6 +69,11 @@ function Roadmap() {
                     <div
                         key={'milestone' + mileStoneIndex}
                         className="relative p-4"
+                        data-aos={
+                            mileStoneIndex % 2
+                                ? 'fade-up-left'
+                                : 'fade-up-right'
+                        }
                     >
                         <img
                             src={

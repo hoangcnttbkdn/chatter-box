@@ -31,9 +31,12 @@ function MainLayout() {
                         } flex flex-wrap justify-center md:justify-between`}
                     >
                         <ul className="flex font-semibold justify-between rounded-sm gap-2 md:gap-4">
-                            {navItems.map((item) =>
+                            {navItems.map((item, index) =>
                                 item.key ? (
-                                    <div className="hidden md:flex items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white">
+                                    <div
+                                        key={'nav' + index}
+                                        className="hidden md:flex items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white"
+                                    >
                                         <span>Chatter</span>
                                         <span className="text-red">Box</span>
                                     </div>

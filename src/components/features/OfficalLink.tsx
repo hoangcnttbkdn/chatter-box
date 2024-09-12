@@ -1,4 +1,11 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS animations styles
+import { useEffect } from 'react';
+
 function OfficalLink() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
     const socials: {
         name: string;
         url: string;
@@ -57,8 +64,14 @@ function OfficalLink() {
                     <div className="text-3xl">Official Links</div>
 
                     <div className="offical-links grid grid-cols-2 md:grid-cols-4 gap-8 items-center flex-wrap justify-center py-8">
-                        {socials.map((social) => (
-                            <section className="card">
+                        {socials.map((social, index) => (
+                            <section
+                                data-aos="fade-up"
+                                key={'social' + index}
+                                className="card"
+                                data-aos-duration="2000"
+                                data-aos-delay={index * 100}
+                            >
                                 <div className="card_inner hover:shadow-md black-red-gradient-bg hover:scale-105 cursor-pointer transition-all bflex flex-col gap-2 rounded-xl  p-4 px-10  relative text-white shadow-md">
                                     <div className="card_inner__circle absolute  w-12 h-12 rounded-full  top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-2/3">
                                         <img src={social.img} className="" />

@@ -1,14 +1,14 @@
-import * as message from '../../assets/images/message.svg';
 import Title from '../ui/title';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS animations styles
+import { useEffect } from 'react';
 
 function About() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
     return (
         <div className="my-4 md:mb-24">
-            <img
-                src={message.default}
-                alt="Background"
-                className="absolute blur-md w-1/3  object-contain top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            />
             <img
                 src="/red ligh left.svg"
                 alt="Background"
@@ -21,7 +21,7 @@ function About() {
             />
             <div className="max-w-6xl px-8 relative h-full flex flex-col gap-4 justify-center items-center text-center text-base">
                 <Title title="About"></Title>
-                <div className="leading-8 text-xl w-3/4">
+                <div data-aos="zoom-in-down" className="leading-8 text-xl w-3/4">
                     Chatter Box - revolutionizing AMAs (Ask Me Anything
                     sessions) by introducing voice-based real-time interactions
                     and Al capabilities. It will use Chatter box's Al technology

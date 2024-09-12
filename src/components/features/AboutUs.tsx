@@ -1,7 +1,20 @@
 import * as cube from '../../assets/images/page/cube.png';
+import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS animations styles
+import { useEffect } from 'react';
 
 function AboutUs() {
-    const cubes = ['', 'ml-auto', ' translate-x-1/2', '-translate-x-1/2 ml-auto'];
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
+    const cubes = [
+        '',
+        'ml-auto',
+        ' translate-x-1/2',
+        '-translate-x-1/2 ml-auto',
+    ];
     return (
         <div className="grid grid-cols-2 gap-2 w-full px-2 md:px-10">
             <div className="absolute top-1/4 w-1/3 left-0 -translate-x-1/2">
@@ -9,14 +22,23 @@ function AboutUs() {
             </div>
 
             <div className="px-8 z-20 flex flex-col gap-4 items-start justify-center">
-                <div className="text-xl md:text-4xl vastago-bold">
+                <div
+                    data-aos="fade-up"
+                    className="text-xl md:text-4xl vastago-bold"
+                >
                     Engage Like Never Before
                 </div>
-                <p className="text-left vastago-thin max-w-2xl jakarta-regular text-base md:text-xl">
+                <p
+                    data-aos="fade-up"
+                    className="text-left vastago-thin max-w-2xl jakarta-regular text-base md:text-xl"
+                >
                     Chatter Box: Where AI meets voice for next-gen developer
                     AMAs
                 </p>
-                <div className="cursor-pointer launch-app-btn py-2 rounded-xl text-2xl px-8 vastago-extra-light">
+                <div
+                    data-aos="fade-up"
+                    className="cursor-pointer launch-app-btn py-2 rounded-xl text-2xl px-8 vastago-extra-light"
+                >
                     Launch App
                 </div>
             </div>
@@ -33,11 +55,18 @@ function AboutUs() {
                     <div className="grid items-center justify-center grid-cols-2 grid-rows-2">
                         {cubes?.map((_, index) => {
                             return (
-                                <div className={' w-2/5 z-10 ' + _}>
+                                <div
+                                    key={'cube' + index}
+                                    className={' w-2/5 z-10 ' + _}
+                                >
                                     <img
                                         src={cube.default}
                                         alt=""
-                                        className={ index % 3 ? 'animation-move-up' : 'animation-move-down'}
+                                        className={
+                                            index % 3
+                                                ? 'animation-move-up'
+                                                : 'animation-move-down'
+                                        }
                                     />
                                 </div>
                             );

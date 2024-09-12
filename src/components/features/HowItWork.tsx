@@ -4,7 +4,7 @@ import * as voiceIcon from '../../assets/images/page/icon voice.png';
 function HowItWork() {
     return (
         <>
-            <div className="flex flex-col gap-8  md:w-4/5 mx-auto overflow-hidden">
+            <div   data-aos="fade-up" className="flex flex-col gap-8  md:w-4/5 mx-auto overflow-hidden">
                 <div className="absolute top-1/3 left-0 z-10 translate-y-1/2 -translate-x-1/6">
                     <img
                         src="howitwork/blur text background.png"

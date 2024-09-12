@@ -37,8 +37,7 @@ and less tech-savvy users participation`,
             content: `Governance tokens give users a voice in 
 shaping the platform's future
 `,
-            customClass:
-                'bottom-0 left-1/2 md:-translate-x-1/2 md:-translate-y-1/3',
+            customClass: 'bottom-0 translate-y-3/4 -translate-x-1/4',
         },
     ];
     return (
@@ -55,23 +54,23 @@ shaping the platform's future
                     Benefits of <br className="hidden md:block" /> Our Solution
                 </b>
 
-                {benefits?.map((benefit) => {
+                {benefits?.map((benefit, index) => {
                     return (
-                        <>
-                            <div
-                                className={
-                                    'z-10 md:absolute flex flex-col gap-2 items-center justify-center md:w-1/3 ' +
-                                    benefit.customClass
-                                }
-                            >
-                                <span className="text-red text-xl md:text-2xl text-center">
-                                    {benefit.title}
-                                </span>
-                                <p className="text-md text-center w-4/5">
-                                    {benefit.content}
-                                </p>
-                            </div>
-                        </>
+                        <div
+                            key={'benefit' + index}
+                            data-aos={index % 2 ? 'fade-up-left' : 'fade-up-right'}
+                            className={
+                                'z-10 md:absolute flex flex-col gap-2 items-center justify-center md:w-1/3 ' +
+                                benefit.customClass
+                            }
+                        >
+                            <span className="text-red text-xl md:text-2xl text-center">
+                                {benefit.title}
+                            </span>
+                            <p className="text-md text-center w-4/5">
+                                {benefit.content}
+                            </p>
+                        </div>
                     );
                 })}
             </div>

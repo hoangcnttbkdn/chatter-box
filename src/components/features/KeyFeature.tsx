@@ -2,8 +2,17 @@ import * as radialSm from '../../assets/images/radial-red-sm.png';
 import * as radial from '../../assets/images/radial-red.png';
 import * as markIcon from '../../assets/images/mark-icon.png';
 import * as message from '../../assets/images/message.svg';
+import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS animations styles
+import { useEffect } from 'react';
+
 
 function KeyFeature() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+      }, [])
+      
     interface Feature {
         title: string;
         content: string;
@@ -66,7 +75,11 @@ unique avatar personality based on your brand`,
                     className="moving-left-right absolute -bottom-12 right-0 w-1/4"
                 />
                 {features.map((feature, index) => (
-                    <div key={index} className="p-4 rounded-lg shadow-md">
+                    <div
+                        key={index}
+                        className="p-4 rounded-lg shadow-md"
+                        data-aos="fade-up"
+                    >
                         <h3 className="text-base font-bold mb-2">
                             {feature.title}
                         </h3>

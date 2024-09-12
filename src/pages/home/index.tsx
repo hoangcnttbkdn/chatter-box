@@ -10,10 +10,22 @@ import Tokenomic from '../../components/features/Tokenomic';
 import Section from '../../components/ui/section';
 import './home.scss';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // AOS animations styles
+import { useEffect } from 'react';
+
 function HomePage() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+    
     return (
         <>
-            <Section id="about-us" title="" customClassName='overflow-hidden md:pt-0'>
+            <Section
+                id="about-us"
+                title=""
+                customClassName="overflow-hidden md:pt-0"
+            >
                 <AboutUs></AboutUs>
             </Section>
 
@@ -68,7 +80,11 @@ function HomePage() {
             <Section id="roadmap" title="Roadmap" customClassName="relative">
                 <Roadmap></Roadmap>
             </Section>
-            <Section id="social" title="" customClassName="relative overflow-hidden">
+            <Section
+                id="social"
+                title=""
+                customClassName="relative overflow-hidden"
+            >
                 <OfficalLink></OfficalLink>
             </Section>
         </>
