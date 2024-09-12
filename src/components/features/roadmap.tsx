@@ -95,7 +95,7 @@ function Roadmap() {
                                     : 'items-end')
                             }
                         >
-                            <b className="text-2xl">{milestone.title}</b>
+                            <b className="text-base md:text-2xl">{milestone.title}</b>
                             <b className="text-md">{milestone.time}</b>
                             <p className="text-md"> {milestone.description}</p>
                         </div>

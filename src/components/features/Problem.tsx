@@ -62,7 +62,7 @@ languages, and enables simultaneous AMAS. scalability.
                                 {section.title}
                             </div>
 
-                            <div className="text-red text-xl font-bold">
+                            <div className="text-red text-base md:text-xl font-bold">
                                 {section.subTitle}
                             </div>
 
@@ -94,7 +94,7 @@ languages, and enables simultaneous AMAS. scalability.
 
                                                 <p
                                                     className={
-                                                        'font-light text-xl ' +
+                                                        'font-light text-base md:text-xl ' +
                                                         (sectionIndex % 2
                                                             ? 'text-right'
                                                             : '')

@@ -49,7 +49,7 @@ function HowItWork() {
                     </div>
                 </div>
 
-                <p className="text-center text-xl leading-8">
+                <p className="text-center text-base md:text-xl leading-8">
                     Chatter Box uses advanced NLP to instantly analyze
                     questions, recognizing context, intent, and keywords. It
                     provides precise responses for factual inquiries and

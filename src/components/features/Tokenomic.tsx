@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // AOS animations styles
 import { useEffect } from 'react';
 import * as logo from '../../assets/images/page/logo.png';
-import FeatureCard from '../common/featureCard';
+import FeatureCard from '../common/FeatureCard';
 
 interface InfoItem {
     label: string;
@@ -61,7 +61,7 @@ Chatter Box's revenue`,
 
     return (
         <>
-            <div className="relative z-10 overflow-hidden max-w-6xl mx-auto px-20 md:px-4 sm:grid grid-cols-2 md:grid-cols-3 items-center gap-8">
+            <div className="relative z-10 overflow-hidden max-w-6xl mx-auto px-10 md:px-4 sm:grid grid-cols-2 md:grid-cols-3 items-center gap-8">
                 <div className="relative ">
                     <img
                         src={commentFrame1.default}
@@ -84,7 +84,7 @@ Chatter Box's revenue`,
                     src={logo.default}
                     className="object-contain hidden md:block"
                 />
-                <div className="relative">
+                <div className="relative px-10 md:px-0">
                     <img
                         src={commentFrame2.default}
                         className="object-contain"
@@ -93,7 +93,7 @@ Chatter Box's revenue`,
                         <div className="text-red font-bold md:text-xl">
                             Tax Structure
                         </div>
-                        <span className="text-2xl md:text-5xl font-bold">
+                        <span className="text-3xl md:text-5xl font-bold">
                             5/5
                         </span>
                     </div>

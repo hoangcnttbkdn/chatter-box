@@ -16,7 +16,7 @@ function AboutUs() {
         '-translate-x-1/2 ml-auto',
     ];
     return (
-        <div className="grid grid-cols-2 gap-2 w-full px-2 md:px-10">
+        <div className="grid md:grid-cols-2 gap-y-10 md:gap-2 w-full px-2 md:px-10">
             <div className="absolute top-1/4 w-1/3 left-0 -translate-x-1/2">
                 <img src="radial-red.png" alt="" className="" />
             </div>
@@ -37,7 +37,7 @@ function AboutUs() {
                 </p>
                 <div
                     data-aos="fade-up"
-                    className="cursor-pointer launch-app-btn py-2 rounded-xl text-2xl px-8 vastago-extra-light"
+                    className="cursor-pointer launch-app-btn py-2 rounded-xl text-base md:text-2xl px-4 md:px-8 vastago-extra-light"
                 >
                     Launch App
                 </div>

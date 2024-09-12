@@ -19,9 +19,9 @@ function About() {
                 alt="Background"
                 className="absolute  w-1/3  object-contain -top-[10%] right-[5%] z-10 "
             />
-            <div className="max-w-6xl px-8 relative h-full flex flex-col gap-4 justify-center items-center text-center text-base">
+            <div className="max-w-6xl px-4 md:px-8 relative h-full flex flex-col gap-4 justify-center items-center text-center text-base">
                 <Title title="About"></Title>
-                <div data-aos="zoom-in-down" className="leading-8 text-xl w-3/4">
+                <div data-aos="zoom-in-down" className="leading-8 text-base md:text-xl w-full md:w-3/4">
                     Chatter Box - revolutionizing AMAs (Ask Me Anything
                     sessions) by introducing voice-based real-time interactions
                     and Al capabilities. It will use Chatter box's Al technology

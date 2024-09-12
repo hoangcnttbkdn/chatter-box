@@ -63,7 +63,7 @@ function OfficalLink() {
                 <div className="flex flex-col gap-8 items-center my-6 md:my-24">
                     <div className="text-3xl">Official Links</div>
 
-                    <div className="offical-links grid grid-cols-2 md:grid-cols-4 gap-8 items-center flex-wrap justify-center py-8">
+                    <div className="offical-links grid  sm:grid-cols-2 md:grid-cols-4 gap-10 xs:gap-8 items-center flex-wrap justify-center py-8">
                         {socials.map((social, index) => (
                             <section
                                 data-aos="fade-up"
