@@ -5,7 +5,7 @@ import HowItWork from '../../components/features/HowItWork';
 import KeyFeature from '../../components/features/KeyFeature';
 import OfficalLink from '../../components/features/OfficalLink';
 import Problem from '../../components/features/Problem';
-import Roadmap from '../../components/features/Roadmap';
+import Roadmap from '../../components/features/roadmap';
 import Tokenomic from '../../components/features/Tokenomic';
 import Section from '../../components/ui/section';
 import './home.scss';
@@ -18,7 +18,7 @@ function HomePage() {
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
-    
+
     return (
         <>
             <Section
