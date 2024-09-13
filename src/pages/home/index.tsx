@@ -69,11 +69,7 @@ function HomePage() {
                 <HowItWork></HowItWork>
             </Section>
 
-            <Section
-                id="tokenomic"
-                title="Tokenomics and Utility - $CHAT"
-                customClassName="relative overflow-hidden"
-            >
+            <Section id="tokenomic" title="" customClassName="relative ">
                 <Tokenomic></Tokenomic>
             </Section>
 

@@ -14,7 +14,7 @@ const Title = ({ title, ...rest }: TitleProps) => {
         <div
             {...rest}
             data-aos="fade-up"
-            className="relative my-4 w-full mx-auto text-center text-4xl md:text-5xl vastago-bold"
+            className="relative my-4 w-full mx-auto text-center text-2xl xs:text-4xl md:text-5xl vastago-bold"
         >
             {title}
         </div>
