@@ -61,20 +61,20 @@ Chatter Box's revenue`,
 
     return (
         <>
-            <div className="absolute  z-0 top-[2%] md:top-[-3%] left-1/2 -translate-x-1/2 w-full flex items-center justify-center">
+            <div className="absolute  z-0 top-[-50px] left-1/2 -translate-x-1/2 w-full flex items-center justify-center">
                 <img src="ball@3x-8.png" className="rotating-image block" />
 
                 <div className="w-screen"></div>
             </div>
 
-            <div className="mt-32 flex flex-col bg-black rounded-xl relative">
+            <div className="md:mt-32 flex flex-col bg-black rounded-xl relative">
                 <div className='absolute w-full h-full bg-black '>
 
                 </div>
-                <div className='relative h-[90px] md:h-[120px] -translate-y-[60px] md:-translate-y-[120px]'>
+                <div className='relative h-[90px] md:h-[120px] -translate-y-[60px] -md:-translate-y-[100px]'>
                     <Title title="Tokenomics and Utility - $CHAT"></Title>
                     <div
-                        className="tn-atom h-[70px] md:h-[120px] absolute bottom-0 left-0 w-full"
+                        className="tn-atom h-[70px] md:h-[110px] absolute bottom-0 left-0 w-full"
                         style={{
                             transformOrigin: 'center center',
                         }}
