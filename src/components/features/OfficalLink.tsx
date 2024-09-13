@@ -81,18 +81,18 @@ function OfficalLink() {
                                     <div className="card_inner__circle absolute  w-12 h-12 rounded-full  top-0 left-1/2 z-20 -translate-x-1/2 -translate-y-2/3">
                                         <img src={social.img} className="" />
                                     </div>
-                                    <div className="card_inner__content">
+                                    <a
+                                        href={social.url}
+                                        target="_blank"
+                                        className="card_inner__content"
+                                    >
                                         <div className="relative z-10">
                                             {social.name}:
                                         </div>
-                                        <a
-                                            href={social.url}
-                                            target="_blank"
-                                            className="relative z-10"
-                                        >
+                                        <div className="relative z-10">
                                             {social.key}
-                                        </a>
-                                    </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </section>
                         ))}
