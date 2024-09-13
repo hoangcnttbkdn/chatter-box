@@ -3,7 +3,7 @@ import '../../global.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // AOS animations styles
 import { useEffect } from 'react';
-
+import * as Pdf from '../../assets/CHATTER_compressed.pdf';
 interface NavItem {
     href: string;
     name: string;
@@ -24,7 +24,6 @@ function MainLayout() {
         { href: 'roadmap', name: 'Roadmap' },
         { href: 'tokenomic', name: 'Tokenomics' },
         { href: 'social', name: 'Socials' },
-        { href: 'whitepaper', name: 'Whitepaper' },
     ];
     const hasKeyItem = navItems.some((item) => item.key !== undefined);
 
@@ -60,6 +59,11 @@ function MainLayout() {
                                     </li>
                                 )
                             )}
+                            <li className="nav-item  min-w-20 cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-md lg:text-base ">
+                                <a href={Pdf.default} target="_blank">
+                                    Whitepaper
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div className="flex md:hidden items-center gap-2 text-2xl md:text-4xl px-8 font-bold text-white">
