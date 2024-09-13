@@ -50,7 +50,7 @@ function AboutUs() {
                             </div>
                             <div
                                 data-aos="fade-up"
-                                className="cursor-pointer h-full launch-app-btn py-2 rounded-xl text-base md:text-2xl px-4 md:px-8 vastago-extra-light"
+                                className="cursor-pointer disabled h-full launch-app-btn py-2 rounded-xl text-base md:text-2xl px-4 md:px-8 vastago-extra-light"
                             >
                                 <div className="flex flex-col items-center">
                                     <div className="text-base md:text-xl">Staking dapp</div>

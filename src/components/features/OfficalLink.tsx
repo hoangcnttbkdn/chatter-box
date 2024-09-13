@@ -10,24 +10,29 @@ function OfficalLink() {
         name: string;
         url: string;
         img: string;
+        key: string;
     }[] = [
         {
             name: 'Website',
             url: '########',
+            key: '########',
             img: '/web.svg',
         },
         {
             name: 'Telegram',
-            url: '########',
+            key: 'AI_ChatterBOX',
+            url: 'https://t.me/AI_ChatterBOX',
             img: '/telegram.svg',
         },
         {
             name: 'Twitter',
-            url: '@AI_ChatterBOX',
+            key: 'AI_ChatterBox_',
+            url: 'https://x.com/AI_ChatterBox_',
             img: '/X.svg',
         },
         {
             name: 'Etherscan',
+            key: '########',
             url: '########',
             img: '/etherscan.png',
         },
@@ -80,9 +85,13 @@ function OfficalLink() {
                                         <div className="relative z-10">
                                             {social.name}:
                                         </div>
-                                        <div className="relative z-10">
-                                            {social.url}
-                                        </div>
+                                        <a
+                                            href={social.url}
+                                            target="_blank"
+                                            className="relative z-10"
+                                        >
+                                            {social.key}
+                                        </a>
                                     </div>
                                 </div>
                             </section>

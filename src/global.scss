@@ -58,6 +58,13 @@ body {
     &:hover {
         animation-play-state: paused;
     }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+
+        background: rgb(43, 8, 8) !important;
+    }
 }
 
 @property --border-angle {
