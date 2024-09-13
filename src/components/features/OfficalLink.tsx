@@ -20,7 +20,7 @@ function OfficalLink() {
         },
         {
             name: 'Telegram',
-            key: 'AI_ChatterBOX',
+            key: 'AI_ChatterBox',
             url: 'https://t.me/AI_ChatterBOX',
             img: '/telegram.svg',
         },
