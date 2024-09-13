@@ -16,6 +16,7 @@ function MainLayout() {
     }, []);
 
     const navItems: NavItem[] = [
+        { href: 'about-us', name: '' },
         { href: 'about-us', name: 'About' },
         { href: 'feature', name: 'Features' },
         { href: 'benefit', name: 'Benefits' },
@@ -23,6 +24,7 @@ function MainLayout() {
         { href: 'roadmap', name: 'Roadmap' },
         { href: 'tokenomic', name: 'Tokenomics' },
         { href: 'social', name: 'Socials' },
+        { href: 'whitepaper', name: 'Whitepaper' },
     ];
     const hasKeyItem = navItems.some((item) => item.key !== undefined);
 
@@ -50,7 +52,7 @@ function MainLayout() {
                                 ) : (
                                     <li
                                         key={item.href}
-                                        className="nav-item cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-md lg:text-base "
+                                        className="nav-item  min-w-20 cursor-pointer md:px-4 md:py-2 hover:text-orange-600 text-xs md:text-md lg:text-base "
                                     >
                                         <a href={`#${item.href}`}>
                                             {item.name}

@@ -41,11 +41,24 @@ function AboutUs() {
                             Chatter Box: Where AI meets voice for next-gen
                             developer AMAs
                         </p>
-                        <div
-                            data-aos="fade-up"
-                            className="cursor-pointer launch-app-btn py-2 rounded-xl text-base md:text-2xl px-4 md:px-8 vastago-extra-light"
-                        >
-                            Launch App
+                        <div className="flex items-center gap-2 md:gap-6 mt-2 md:mt-4">
+                            <div
+                                data-aos="fade-up"
+                                className="cursor-pointer h-full launch-app-btn py-2 rounded-xl text-base md:text-2xl px-4 md:px-8 vastago-extra-light"
+                            >
+                                Launch App
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                className="cursor-pointer h-full launch-app-btn py-2 rounded-xl text-base md:text-2xl px-4 md:px-8 vastago-extra-light"
+                            >
+                                <div className="flex flex-col items-center">
+                                    <div className="text-base md:text-xl">Staking dapp</div>
+                                    <span className="text-xs">
+                                        *coming soon*
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

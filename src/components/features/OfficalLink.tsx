@@ -99,7 +99,7 @@ function OfficalLink() {
                                 className="flex items-center gap-2 text-xl md:text-5xl opacity-20"
                             >
                                 <span>Chatter</span>
-                                <span className="text-blue">Box</span>
+                                <span className="text-red">Box</span>
                             </div>
                         ))}
                         {/* Duplicate the items for continuous scrolling */}
@@ -109,7 +109,7 @@ function OfficalLink() {
                                 className="flex items-center gap-2 text-xl md:text-5xl opacity-20"
                             >
                                 <span>Chatter</span>
-                                <span className="text-blue">Box</span>
+                                <span className="text-red">Box</span>
                             </div>
                         ))}
                     </div>
