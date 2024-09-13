@@ -52,7 +52,7 @@ function AboutUs() {
                                 data-aos="fade-up"
                                 className="cursor-pointer disabled h-full launch-app-btn py-2 rounded-xl text-base md:text-2xl px-4 md:px-8 vastago-extra-light"
                             >
-                                Staking dapp
+                               Staking dApp
                             </div>
                         </div>
                     </div>
