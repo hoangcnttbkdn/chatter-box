@@ -55,7 +55,7 @@ function HowItWork() {
                     provides precise responses for factual inquiries and
                     formulates engaging answers for personalized queries. The
                     bot learns from interactions to improve understanding and
-                    adapt to updates about the host's project
+                    adapt to updates about the host's project.
                 </p>
             </div>
         </>
