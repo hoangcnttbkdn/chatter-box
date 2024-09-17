@@ -3,11 +3,11 @@ name: Build and Deploy
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag to deploy'
-        required: true
-        default: 'latest'
+    # inputs:
+    #   tag:
+    #     description: 'Tag to deploy'
+    #     required: true
+    #     default: 'latest'
       
 permissions:
   contents: read
@@ -26,8 +26,8 @@ jobs:
     
     - name: Checkout code
       uses: actions/checkout@v4
-      with:
-        ref: ${{ github.event.inputs.tag }}
+      # with:
+      #   ref: ${{ github.event.inputs.tag }}
         
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v3
