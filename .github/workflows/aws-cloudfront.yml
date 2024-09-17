@@ -26,6 +26,8 @@ jobs:
     
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        ref: ${{ github.ref_name }}
       # with:
       #   ref: ${{ github.event.inputs.tag }}
         
