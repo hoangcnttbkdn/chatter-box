@@ -23,8 +23,8 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v3
       with:
-        role-to-assume: arn:aws:iam::649313779322:role/chatter-box-fe-github-actions-role
-        aws-region: ap-southeast-1
+        role-to-assume: ${{ secrets.AWS_GITHUB_ACTIONS_ROLE }}
+        aws-region: ${{ vars.AWS_REGION }}
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
