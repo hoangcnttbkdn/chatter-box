@@ -33,12 +33,23 @@ jobs:
 
     - name: Get .env file from ssm 
       run: |
-        aws --region ${{ vars.AWS_REGION }} ssm get-parameter --name "/chatter-box/ENV" --with-decryption --output text --query Parameter.Value > .env
+        aws ssm get-parameter --name "/chatter-box/ENV" --with-decryption --output text --query Parameter.Value > .env
         cat .env
         ls -lah
 
-    # - name: Install dependencies
-    #   run: npm install
+    - name: Install dependencies
+      run: npm install
 
-    # - name: Build project
-    #   run: npm run build
+    - name: Build project
+      run: npm run build
+
+    - name: Upload artifact to S3 bucket
+      run: |
+        aws s3 sync --cache-control 'max-age=604800' dist/ s3://${{ secrets. AWS_S3_BUCKET_NAME }}/dist/ --delete --exclude '*.svg' --exclude index.html
+        aws s3 sync --cache-control 'max-age=604800' dist/ s3://${{ secrets. AWS_S3_BUCKET_NAME }}/dist/ --delete --exclude '*' --include '*.svg' --content-type 'image/svg+xml'
+        aws s3 sync --cache-control 'no-cache' dist/ s3://${{ secrets. AWS_S3_BUCKET_NAME }}/dist/
+
+    - name: Refresh cache 
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths '/*'
+
