@@ -33,12 +33,12 @@ jobs:
 
     - name: Get .env file from ssm 
       run: |
-        aws ssm get-parameters --name "/chatter-box/ENV" --with-decryption --query "Parameter.Value" --output text > .env
+        aws --region ${{ vars.AWS_REGION }} ssm get-parameters --name "/chatter-box/ENV" --with-decryption --query "Parameter.Value" --output text > .env
         cat .env
         ls -lah
 
-    - name: Install dependencies
-      run: npm install
+    # - name: Install dependencies
+    #   run: npm install
 
-    - name: Build project
-      run: npm run build
+    # - name: Build project
+    #   run: npm run build
