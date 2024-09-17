@@ -33,7 +33,7 @@ jobs:
 
     - name: Get .env file from ssm 
       run: |
-        aws --region ${{ vars.AWS_REGION }} ssm get-parameters --name "/chatter-box/ENV" --with-decryption --query "Parameter.Value" --output text > .env
+        aws --region ${{ vars.AWS_REGION }} ssm get-parameter --name "/chatter-box/ENV" --with-decryption --output text --query Parameter.Value > .env
         cat .env
         ls -lah
 
