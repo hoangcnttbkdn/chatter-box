@@ -43,6 +43,7 @@ jobs:
     - name: Get .env file from ssm 
       run: |
         aws ssm get-parameter --name "/chatter-box/ENV" --with-decryption --output text --query Parameter.Value > .env
+        cat tag.txt
         cat .env
         ls -lah
 
