@@ -31,7 +31,7 @@ jobs:
       with:
         node-version: '20'
 
-    - name: Get .env file
+    - name: Get .env file from ssm 
       run: |
         aws ssm get-parameters --names "/chatter-box/ENV" --with-decryption --query "Parameter.Value" --output text > .env
         cat .env
